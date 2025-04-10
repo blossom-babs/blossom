@@ -1,27 +1,104 @@
 ---
+import Layout from "../layouts/Layout.astro";
+
 const pageTitle = "About Blossom";
 ---
+<Layout>
 
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>{pageTitle}</title>
+    </head>
+    <body>
+    
+      <h2>Hi, I'm Blossom.</h2>
+      <div class="container">
+       
+        </section>
+        <div class="box">
+         
+  
+   
+  
+        <p>
+          I watched alias at one point when I was in my early teens, then I stumbled upon the spy kids franchise. It was my favorite thing to watch in the entire world, and my career was set in stone, I wanted to become a hacker.
+        </p>
+  
+        <p>Okay, maybe I exaggerated.</p>
+  
+        <p>I didn't always I wanted to be a software developer, that career knowledge came with experience, but I knew I wanted to work in the software field and that built the foundation of me studying computer science and getting my first job as a technical developer.</p>
+  
+        <h2>Career.</h2>
+  
+      <p>I've been writing code professionally since 2019 when I interned at Voip55 as a technical developer building fullstack applications in python, flask and  vanilla HTML. I got my first full time role as a frontend developer at a startup in Lagos Nigeria. </p>
+  
+    <h2>Career Timeline.</h2>
+    
+      <div>
+        <div>
+        July 2023 - March 2025
+        </div>
+        <div>
+          <p>Cleva Technolgies</p>
+          <p>Frontend Engineer</p>
+          <p>One of 2 founding frontend engineers where I was able to shape the web product. </p>
+        </div>
+      </div>
+    
+        <quote> 
+    Without training, they lacked knowledge, without knowledge, they lacked confidence. Without confidence, they lacked victory (Julius Ceasar)
+        </quote>
+      </div>
+      <section class="about-sidenav">
+        <ul>
+          <li>- - -</li>
+          <li><a href="/archive">Archives</a></li>
+          <li><a href="/library">Library</a></li>
+          <li><a href="/others">Others.</a></li>
+       
+        </ul>
+      </div>
+    </body>
+  </html>
+</Layout>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitle}</h1>
-    <h2>... and my new Astro site!</h2>
+<style>
 
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+  body{
 
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+  }
+  
+  .box{
+    overflow: scroll;
+    height:60vh;
+  }
 
-    <quote> 
-Without training, they lacked knowledge, without knowledge, they lacked confidence. Without confidence, they lacked victory (Julius Ceasar)
-    </quote>
-  </body>
-</html>
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .about-sidenav{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .about-sidenav ul{
+   /* list-style-type: none; */
+   display: grid;
+   gap: .4rem;
+  }
+  .about-sidenav ul li a, .about-sidenav ul li {
+   text-decoration: none;
+   color: #A37643;
+   font-weight: 500;
+   font-size: 14px;
+  }
+  .about-sidenav ul li a:hover {
+   opacity: 0.7;
+  }
+</style>

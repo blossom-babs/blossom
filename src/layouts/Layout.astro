@@ -1,3 +1,6 @@
+---
+import { Icon } from 'astro-icon/components'
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -10,7 +13,7 @@
 	<body>
 		<div class="container">
 			<nav class="nav-links">
-				<div class="home-link"><a href="/">&#x1F33C;</a></div>
+				<div class="home-link"><a style="color:#A37643;" href="/">&#x1F33C;</a></div>
 				<ul class="nav-list">
 		
 					
@@ -25,15 +28,29 @@
 			<slot />
 	
 			<footer>
-				Copyright $c; 20025
+				<p>Copyright &copy; 2025</p>
+				
 	
 				<ul>
 				
-					<li><a href="mailto:blossombab.swe@gmail.com">Mail me</a></li>
-					<li><a href="">LI</a></li>
-					<li><a href="">Twitter</a></li>
-					<li><a href="">IG</a></li>
-					<li><a href="">YT</a></li>
+					
+					<li><a href="mailto:blossombab.swe@gmail.com">
+						<Icon name="mdi:mail-outline"/>
+					</a></li>
+					<li><a href="https://github.com/blossom-babs">
+						<Icon name="mdi:github"/>
+					</a></li>
+					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
+						<Icon name="mdi:linkedin"/>
+					</a></li>
+					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
+						<Icon name="mdi:twitter"/>
+					</a></li>
+					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
+						<Icon name="mdi:youtube"/>
+					</a></li>
+					
+					
 				</ul>
 			</footer>
 		</div>
@@ -44,7 +61,7 @@
 	html,
 
 	nav{
-		
+
 	}
 	body {
 		margin: 0;
@@ -98,5 +115,14 @@
 	footer ul{
 list-style-type: none;
 display: flex;
+gap:1rem;
+	}
+	footer ul li a{
+text-decoration: none;
+color: #000;
+font-size:1.5rem;
+	}
+	footer ul li a:hover{
+color:#A37643;
 	}
 </style>

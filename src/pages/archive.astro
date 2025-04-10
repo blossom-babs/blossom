@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+import hashnodeImg from "../assets/hashnode.png";
+import devto from "../assets/devto.png";
+import firstPortfolio from "../assets/first-portfolio.png"
+---
+
+<Layout>
+    <div class="cont">
+        <h3>I see you found the archive. </h3>
+      
+        <div class="archive-grid">
+            <article>
+                <img src={hashnodeImg.src} alt="hashnode blog">
+                <p>Hashnode blog</p>
+                <p>79 draft and 20 articles later. I maintained this blog for nearly 4 years and I thought it would be my personal spot on the internet forever. The mere reason that you're here is proof that we all evolve, and so do our desires.</p>
+                <a href="https://blossom.hashnode.dev/"><Icon name="mdi:external-link"/></a>
+            </article>
+            <article>
+                <img src={devto.src} alt="hashnode blog">
+                <p>Dev.to blog</p>
+                <p>79 draft and 20 articles later. I maintained this blog for nearly 4 years and I thought it would be my personal spot on the internet forever. The mere reason that you're here is proof that we all evolve, and so do our desires.</p>
+                <a href="https://dev.to/blossom"><Icon name="mdi:external-link"/></a>
+            </article>
+            <article>
+                <img src={firstPortfolio.src} alt="hashnode blog">
+                <p>My first ever portfolio</p>
+                <p>Hey, it got me my first internship at Voip55.</p>
+                <a href=https://blossom-babs.github.io/portfolio-two/"><Icon name="mdi:external-link"/></a>
+            </article>
+            <article>
+                <img src={firstPortfolio.src} alt="hashnode blog">
+                <p>A contact card I found when I googled my name</p>
+                <p>I no longer have access to this contact card so I cannot update any outdated information.</p>
+                <a href=https://linktr.ee/BlossomBabalola"><Icon name="mdi:external-link"/></a>
+            </article>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .cont{
+        margin-top: 1rem;
+    }
+.archive-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+
+}
+
+.archive-grid article img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    background-color: #A37643;
+}
+</style>
