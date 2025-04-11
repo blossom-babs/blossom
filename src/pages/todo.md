@@ -1,6 +1,6 @@
 [] 2025 in footer should not be hardcoded
 [] Projects!!!! gotta spit out 4 real quickly, trying to mark Cooper's 
-    Inspo: (https://www.csaye.com/, https://jesseakoh.com/)
+    Inspo: (https://www.csaye.com/, https://jesseakoh.com/, https://devsaran.netlify.app/contact)
 [] font change
 [] ?? why can't i use any other icon but mdi??
 [] bro, I should loop over archive
@@ -10,3 +10,8 @@
 ---
 
 [] difference between astro and jsx: https://docs.astro.build/en/reference/astro-syntax/#differences-between-astro-and-jsx
+[] astro integrations: https://astro.build/integrations/
+
+---
+
+[] icon stash - https://icon-sets.iconify.design/?query=github&search-prefix=mdi
