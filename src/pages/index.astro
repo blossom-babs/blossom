@@ -2,13 +2,45 @@
 import '../styles/global.css';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Featured from '../components/Featured.astro';
+import { Icon } from 'astro-icon/components';
+const pageTitle = "Blossom - Home"
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true})).filter((post:any) => post.frontmatter.featured && !post.frontmatter.main)
+
+console.log(allPosts)
 ---
 
-<Layout>
-	<Welcome />
+<Layout >
+<div class="main">
+	<Featured/>
+
+	<ul class="other-posts">
+		{allPosts.map((post:any) => (
+			<li><a href={post.url}>{post.frontmatter.title}</a> <Icon name="mdi:arrow-top-right"/> </li>
+		))}
+	</ul>
+</div>
 </Layout>
 
 
+<style>
+
+	.main{
+		padding-top: 1rem;
+	}
+
+	.other-posts{
+		padding-top: 4rem;
+		margin: 0;
+		display: grid;
+		gap: .8rem;
+		font-size:14px
+	}
+
+.other-posts li a{
+	color: #2b2b2b;
+
+}
+</style>

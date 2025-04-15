@@ -1,5 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components'
+import '../styles/global.css'
+const {pageTitle} = Astro.props
+const currentYear = new Date().getFullYear()
 ---
 <!doctype html>
 <html lang="en">
@@ -7,48 +10,56 @@ import { Icon } from 'astro-icon/components'
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<!-- <meta name="generator" content={Astro.generator} /> -->
-		<title> It's Blossom, the developer</title>
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<div class="container">
-			<nav class="nav-links">
-				<div class="home-link"><a style="color:#A37643;" href="/">&#x1F33C;</a></div>
-				<ul class="nav-list">
-		
-					
-					<!-- <li><a href="/">Home</a></li> -->
-					<li><a href="/about">About</a></li>
-					<!-- <li><a href="/projects">Projects</a></li> -->
-					<li><a href="/blog">Blog</a></li>
-					<!-- <li><a href="/random">Others.</a></li> // others should be in about and I should instead show off my random, archive, gallery, books read, hobby, future hobby, talks-->
-					
-				</ul>
-			</nav>
-			<slot />
+			<main class="layout-main">
+				<nav class="nav-links">
+					<div class="home-link"><a style="" href="/">home &#x1F33C;</a></div>
+					<ul class="nav-list">
+			
+						
+						<!-- <li><a href="/">Home</a></li> -->
+						<li><a href="/about">about</a></li>
+						<li><a href="/projects">works</a></li>
+						<li><a href="/blog">blog</a></li>
+						<!-- <li><a href="/random">Others.</a></li> // others should be in about and I should instead show off my random, archive, gallery, books read, hobby, future hobby, talks-->
+						
+					</ul>
+				</nav>
+				<slot />
+			</main>
 	
 			<footer>
-				<p>Copyright &copy; 2025</p>
+				<p>copyright &copy; 2025 - {currentYear}</p>
 				
 	
 				<ul>
 				
 					
 					<li><a href="mailto:blossombab.swe@gmail.com">
-						<Icon name="mdi:mail-outline"/>
+						<!-- <Icon name="mdi:mail-outline"/> -->
+						 email
 					</a></li>
 					<li><a href="https://github.com/blossom-babs">
-						<Icon name="mdi:github"/>
+						<!-- <Icon name="mdi:github"/> -->
+						 github
 					</a></li>
 					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
-						<Icon name="mdi:linkedin"/>
+						<!-- <Icon name="mdi:linkedin"/> -->
+						 linkedin
 					</a></li>
-					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
-						<Icon name="mdi:twitter"/>
-					</a></li>
-					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
+					<!-- <li><a href="https://www.linkedin.com/in/blossom-babalola/">
+						 <Icon name="mdi:twitter"/> 
+					</a></li> -->
+					<!-- <li><a href="https://www.linkedin.com/in/blossom-babalola/">
 						<Icon name="mdi:youtube"/>
-					</a></li>
+					</a></li> -->
 					
 					
 				</ul>
@@ -57,72 +68,4 @@ import { Icon } from 'astro-icon/components'
 	</body>
 </html>
 
-<style>
-	html,
 
-	nav{
-
-	}
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #FAF9F7;
-	}
-
-	nav ul{
-		list-style-type: none;
-		display: flex;
-		justify-content: space-around;
-	}
-
-	
-
-	@media screen and (min-width:768px) {
-		.container{
-		width: 500px;
-		margin: 4rem auto 0;
-	}
-	}
-
-	.nav-links{
-		display:flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.nav-list{
-		display:flex;
-		gap: 3rem;
-	}
-
-	.nav-list li a, .home-link a{
-		text-decoration: none;
-	}
-
-	.home-link{
-		font-size: 2.5rem;
-	}
-
-	footer{
-		display: flex;
-		justify-content: space-between;
-		position:fixed;
-		bottom: 4rem;
-		width: 500px;
-		align-items: center;
-	}
-	footer ul{
-list-style-type: none;
-display: flex;
-gap:1rem;
-	}
-	footer ul li a{
-text-decoration: none;
-color: #000;
-font-size:1.5rem;
-	}
-	footer ul li a:hover{
-color:#A37643;
-	}
-</style>

@@ -1,8 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const allPosts = Object.entries(import.meta.glob('../pages/posts/*.md', {eager: true})).map( ([path, post]) => {
+   
+    const slug = path
+  .replace('../pages/posts/', '') // include trailing slash
+  .replace('.md', '');
+    return { ...(post || {}), slug }
+}
+
+)
+const featuredPost = allPosts.filter((post:any) => post.frontmatter.featured && post.frontmatter.main)
+
+
 ---
 
-<Layout>
+<div>
+  
+<article class="featured-main">
+    {featuredPost.map((post:any) => (
+        <a href={`/post/${post.slug}`}>
+        <img src={post.frontmatter.image.url} alt={post.frontmatter.alt} srcset="">
+        <p>{post.frontmatter.title} <Icon name="mdi:arrow-top-right"/> </p>
+        </a>
+    ))}
+</article>
 
-
-</Layout>
+</div>

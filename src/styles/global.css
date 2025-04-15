@@ -1,3 +1,120 @@
-body{
-    background-color: red !important;
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #faf9f7;
+
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  width: 90%;
+  margin: 1rem auto 0;
+  height: 100vh;
+	display:  flex;
+	flex-direction: column;
+}
+
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li a,
+.home-link a {
+  text-decoration: none;
+  color: #a37643;
+  font-size: 14px;
+}
+
+.home-link {
+  color: #a37643;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed;
+  bottom: 4rem; */
+  /* width: 90%; */
+  align-items: center;
+  font-size: 12px;
+  margin-top: auto;
+  padding: 1rem 0;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+}
+footer ul li a {
+  text-decoration: underline;
+  color: #a37643;
+  font-size: 12px;
+}
+footer ul li a:hover {
+  color: #a37643;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 500px;
+    margin: 4rem auto 0;
+  }
+
+  footer {
+    width: 500px;
+  }
+
+  .featured-main p{
+	padding-left: 0;
+
+	}
+}
+
+
+.featured-main{
+	font-size: 14px;
+	color: #2b2b2b;
+	cursor: pointer;
+	font-weight: 600;
+}
+.featured-main a{
+	text-align: center;
+	color: #2b2b2b;
+
+}
+.featured-main p{
+padding-left: 1rem;
+margin-top: .5rem;
+text-decoration: underline;
+}
+.featured-main img{
+	width: 100%;
+border-radius:10px;
+}
+.featured-main:hover{
+	text-decoration: underline;
 }
