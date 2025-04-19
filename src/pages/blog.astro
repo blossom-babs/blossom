@@ -1,15 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro"
 
-<body>
-    <a href="about">About</a>
-    <a href="/">Home</a>
-    <h1>Okay, I'll join the herd to admit astro is really cool.</h1>
-    <ul>
-        <li><a href="/posts/post-1/">Post 1</a></li>
-        <li><a href="/posts/the-beauty-of-side-projects/">Like playing video games</a></li>
-        <li><a href="/posts/post-2/">Post 2</a></li>
-        <li><a href="/posts/post-3/">Post 3</a></li>
-      </ul>
-</body>
+const allPosts = Object.entries(
+  import.meta.glob('../pages/posts/*.md', { eager: true })
+).map(([path, post]) => {
+  const slug = path.replace('../pages/posts/', '').replace('.md', '');
+  return {
+    ...(post as any),
+    slug
+  };
+});
+
+// Group by Month-Year
+const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
+  const pubDate = new Date(post.frontmatter.pubDate);
+  const monthYear = pubDate.toLocaleString('default', { month: 'long', year: 'numeric' }); // "March 2025"
+
+  if (!acc[monthYear]) acc[monthYear] = [];
+  acc[monthYear].push(post);
+
+  return acc;
+}, {});
+
+---
+<Layout>
+
+  <div>
+  
+
+
+        {Object.entries(postsByMonth).map(([month, posts]) => (
+          <section>
+            <h2>{month}</h2>
+            <ul>
+              {posts.map((post) => (
+                <li><a href={`/post/${post.slug}`}>{post.frontmatter.title}</a></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+  </div>
+
+</Layout>
 
 <style>
     

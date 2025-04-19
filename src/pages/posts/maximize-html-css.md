@@ -11,20 +11,76 @@ image:
 tags: ["react", "featured"]
 ---
 
-One of the most common uses of state in react.js is toggling - on and off, yes and no.
+Absolutely — here’s a rewritten and more personalized version of your article, tailored for clarity and your intended audience (intermediate/senior devs and startup builders), with a stronger narrative flow and punchier tone:
 
-```
-const [active, setActive] = useState(false)
+### Title: **What If We Maxed Out HTML & CSS First?**
 
-...
+**Description**: A frontend experiment: how far can we push the browser before reaching for JavaScript?**Tags**: react, frontend, performance**Image**:
 
-<button onClick={() => setActive(!active)}>{active ? 'Display' : 'Hide'} </button>
-```
+At some point, every React dev writes this snippet:
 
-However I was recently introduced to taking advantage of this behaviour by using checkbox on and off property.
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   const [active, setActive] = useState(false);   setActive(!active)}>    {active ? 'Hide' : 'Display'}   `
 
-One of the best things about react is that we are able to easily merge javascript and html code via jsx, but it is also one of the worst things as we are easily able to use javascript for everything significantly increasing the overhead of performance.
+It works. It's clean. But it also introduces state, re-renders, and just a bit more JavaScript than we might actually need.
 
-There is another CSS property that I discovered recently and eliminates the need for onHover effect etc...check it out here.
+### The Checkbox Trick
 
-I'm currently on the hunt for all of the possible ways to take advantage of HTML/CSS properties before looking at javascript, if you have any other tips, I would be glad to have you share them with me.
+Recently, I came across a slick alternative — using a native HTML  to toggle visibility. No state, no re-renders, just plain old HTML doing its thing.
+
+Combine that with :checked in CSS and you've got:
+
+*   A toggle mechanism
+    
+*   Full accessibility
+    
+*   Zero JavaScript overhead
+    
+
+Pretty elegant, right?
+
+### When JSX Becomes a Crutch
+
+One of React’s superpowers is JSX — blending HTML with JS feels natural. But that same flexibility can turn into a trap. It’s easy (and tempting) to reach for state and hooks for everything. Even when HTML/CSS could handle it just fine.
+
+I’ve been guilty of it: using useEffect for simple animations, state for toggles, JS for hover effects...
+
+Turns out, the browser’s built-in capabilities are often good enough — and a lot cheaper.
+
+### The CSS I Was Sleeping On
+
+Another trick I picked up: using :has() (yes, it's finally supported in modern browsers!) to handle things like hover-based child styling — no JS required.
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   .card:has(:hover) {    transform: scale(1.02);  }   `
+
+It feels like having React-style props or conditional logic... just written directly in CSS.
+
+### My Current Rule of Thumb
+
+Before reaching for JS, I now ask:
+
+> Can HTML or CSS do this already?
+
+If the answer is yes, that’s one less re-render, one less hook, and one less dependency.
+
+### Got Tips?
+
+This is an ongoing hunt. If you’ve got a favorite trick that uses raw HTML or CSS to replace a common JS pattern, I’d love to hear it.
+
+Let’s max out the browser first — and only reach for JS when we really need to.
+
+Let me know if you'd like to:
+
+*   Add codepens or live demos
+    
+*   Turn this into a series (e.g., "You Might Not Need That Hook")
+    
+*   Repost a tailored version for LinkedIn with a strong CTA
+    
+
+Want me to prep a LinkedIn post version next?
+
+
+
+<details> and  <summary> so accordion is not needed</summary>
+
+use css attributes instead of classnames: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors

@@ -29,11 +29,25 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const {frontmatter, default:Content} = post
+
+console.log(frontmatter, Content)
 ---
 
 <Layout>
+  <div>Bac</div>
 <article>
+    <h1>{frontmatter.title}</h1>
     <Content/>
 </article>
 
 </Layout>
+
+<style>
+
+    article{
+        color: #2b2b2b;
+        font-size: 14px;
+    }
+
+   
+</style>

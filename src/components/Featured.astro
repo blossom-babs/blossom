@@ -12,10 +12,12 @@ const allPosts = Object.entries(import.meta.glob('../pages/posts/*.md', {eager: 
 )
 const featuredPost = allPosts.filter((post:any) => post.frontmatter.featured && post.frontmatter.main)
 
+const otherPosts = allPosts.filter((post:any) => post.frontmatter.featured && !post.frontmatter.main)
+
 
 ---
 
-<div>
+<div class="featured">
   
 <article class="featured-main">
     {featuredPost.map((post:any) => (
@@ -24,6 +26,29 @@ const featuredPost = allPosts.filter((post:any) => post.frontmatter.featured && 
         <p>{post.frontmatter.title} <Icon name="mdi:arrow-top-right"/> </p>
         </a>
     ))}
+
+    <ul class="other-posts">
+		{otherPosts.map((post:any) => (
+			<li><a href={`/post/${post.slug}`}>{post.frontmatter.title}</a> <Icon name="mdi:arrow-top-right"/> </li>
+		))}
+	</ul>
 </article>
 
 </div>
+
+<style>
+
+    .other-posts{
+		padding-top: 4rem;
+		margin: 0;
+		display: grid;
+		gap: .8rem;
+
+	}
+
+.other-posts li a{
+	color: #2b2b2b;
+
+}
+
+</style>

@@ -1,57 +1,113 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Blossom from '../assets/Blossom.jpeg'
 
-const pageTitle = "About Blossom";
+const pageTitle = "Blossom - About";
+
+const career = [
+  {
+    duration: 'July 2023 - Mar 2025',
+    compLink: 'https://www.linkedin.com/company/cleva-banking/posts/?feedView=all',
+    comp: 'Cleva Technlogies',
+    title: 'Software Engineer, Frontend',
+    bullets: [
+      'contributed to website',
+      'built virtual USD card end-to-end'
+    ],
+    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+  },
+  {
+    duration: 'April 2021 - May 2023',
+    compLink: 'https://www.linkedin.com/company/themullingsgrp/posts/?feedView=all',
+    comp: 'The Mullings Group',
+    title: 'Software Engineer',
+    bullets: [
+      '',
+      ''
+    ],
+    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+  },
+  {
+    duration: 'Oct 2020 - Dec 2020',
+    compLink: 'https://www.linkedin.com/company/devcareers/posts/?feedView=all',
+    comp: 'DevCareer',
+    title: 'Frontend Engineer - Internship',
+    bullets: [
+      '',
+      ''
+    ],
+    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+  },
+  {
+    duration: 'Jan 2020 - Sept 2020',
+    compLink: 'https://www.linkedin.com/company/voip-55-ltd/?originalSubdomain=uk',
+    comp: 'Voip55',
+    title: 'Technical Developer - Internship',
+    bullets: [
+      '',
+      ''
+    ],
+    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+  },
+]
+
 ---
 <Layout>
 
-  <html lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width" />
-      <title>{pageTitle}</title>
-    </head>
-    <body>
-    
+    <section class="about">
+
       <h2>Hi, I'm Blossom.</h2>
-      <div class="container">
-       
-        </section>
-        <div class="box">
-         
-  
+      <!-- <img class="me-img" src={Blossom.src} alt=""> -->
+       <div class="about-inner">
+         <p>
+           As a child, action movies were <i>(and remain)</i> my favorite things to watch. I watched the entire <a href="https://en.wikipedia.org/wiki/Spy_Kids" target="_blank">spy kids franchise </a>till the CD cracked, and it was sometime during that rendezvous I decided I wanted to become an hacker.
+         </p>
    
+         <p>My mom took me to the <a href="https://www.niit.com/NIGERIA" target="_blank">biggest technical skills school in Lagos</a> at the time to learn "hacking" <i>(they called the course cybersecurity - but hacker is much cooler).</i> (Un)fortunately I didn't pass the entrance exam and settled for the closest coolest thing - computer science (at another institute).</p>
+   
+         <p> 4 years later and I'm still as intrigued with the world of software.</p>
+       </div>
   
-        <p>
-          I watched alias at one point when I was in my early teens, then I stumbled upon the spy kids franchise. It was my favorite thing to watch in the entire world, and my career was set in stone, I wanted to become a hacker.
-        </p>
-  
-        <p>Okay, maybe I exaggerated.</p>
-  
-        <p>I didn't always I wanted to be a software developer, that career knowledge came with experience, but I knew I wanted to work in the software field and that built the foundation of me studying computer science and getting my first job as a technical developer.</p>
-  
-        <h2>Career.</h2>
-  
-      <p>I've been writing code professionally since 2019 when I interned at Voip55 as a technical developer building fullstack applications in python, flask and  vanilla HTML. I got my first full time role as a frontend developer at a startup in Lagos Nigeria. </p>
-  
-    <h2>Career Timeline.</h2>
-    
+    <h3>Career Timeline.</h3>
+
+    <aside class="timeline-container">
+      {career.map((item) => (
+        <div class="t-grid">
       <div>
-        <div>
-        July 2023 - March 2025
-        </div>
-        <div>
-          <p>Cleva Technolgies</p>
-          <p>Frontend Engineer</p>
-          <p>One of 2 founding frontend engineers where I was able to shape the web product. </p>
-        </div>
+        <p class="t-grid-time">{item.duration}</p>
+        <div class="t-grid-animation"></div>
       </div>
+      <div >
+        <details>
+        <summary>{item.title} </summary>
+        <div class="career-context">
+          <ul>
+            {item.bullets.map((task) => (
+              <li>{task}</li>
+            ))}
+          </ul>
+          <p>
+            {item.technologies}
+          </p>
+
+        </div>
+        </details>
+        <p><a href={item.compLink}>{item.comp}</a></p>
+      </div>
+    </div>
+      ))}
+    </aside>
+
     
-        <quote> 
-    Without training, they lacked knowledge, without knowledge, they lacked confidence. Without confidence, they lacked victory (Julius Ceasar)
-        </quote>
-      </div>
-      <section class="about-sidenav">
+  
+    <details>
+      <summary>Other interesting experiences</summary>
+      <p>Galaxy Backbone, A mandatory 1-year service experience in Nigeria, as a customer service representative</p>
+    </details>
+
+
+ 
+      <aside class="about-sidenav">
         <ul>
           <li>- - -</li>
           <li><a href="/archive">Archives</a></li>
@@ -59,33 +115,80 @@ const pageTitle = "About Blossom";
           <li><a href="/others">Others.</a></li>
        
         </ul>
-      </div>
-    </body>
-  </html>
+
+    </aside>
+
 </Layout>
 
 <style>
 
-  body{
-
-  }
-  
-  .box{
-    overflow: scroll;
-    height:60vh;
+  .about{
+    heig
   }
 
-  .container{
-    display: grid;
-    grid-template-columns: 1fr 100px;
-    gap: 1rem;
+  /* .t-grid-animation{
     position: relative;
+  width: 2px;
+  height:4rem;
+  background-color: red;
+  } */
+
+  /* .t-grid-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #333;
+  transform: translateX(-50%);
+  animation: growLine .5s ease-in-out forwards;
+} */
+
+.timeline-container{
+  display:grid;
+  gap:1rem;
+}
+
+@keyframes growLine {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+ .career-context{
+  /* display: none; */
+ }
+  .about-inner p{
+    line-height: 20px;
+    width: 550px;
+  }
+  .about-inner a{
+    color:#A37643;
   }
 
+  details{
+    cursor: pointer;
+  }
+.t-grid-time{
+  font-size: 12px;
+
+  margin: 0;
+
+}
+.t-grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: start;
+  position: relative;
+}
   .about-sidenav{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 300px;
+    bottom:4rem;
   }
   .about-sidenav ul{
    /* list-style-type: none; */
@@ -101,4 +204,17 @@ const pageTitle = "About Blossom";
   .about-sidenav ul li a:hover {
    opacity: 0.7;
   }
+
+  .me-img{
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+
+  }
+
+  .about{
+    font-size: 14px;
+    color: #2b2b2b;
+  }
+  
 </style>

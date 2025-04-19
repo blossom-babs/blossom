@@ -24,3 +24,8 @@ pnpm-debug.log*
 .idea/
 todo.md
 private.md
+pages/posts/draft
+pages/posts/donut
+
+/pages/posts/donut/
+/pages/posts/draft/
