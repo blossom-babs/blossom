@@ -2,19 +2,29 @@
 import Layout from "../layouts/Layout.astro";
 import Blossom from '../assets/Blossom.jpeg'
 
+import Brilliant from '../assets/brilliant.png'
+import Cute from '../assets/cutegif.gif'
+import Duo from '../assets/duo.png'
+import Elevate from '../assets/elevate.png'
+import Office from '../assets/office.gif'
+import Outing from '../assets/outingwithtreaz.jpeg'
+import Youversion from '../assets/youversion.png'
+import ztm from '../assets/ztm.png'
+
 const pageTitle = "Blossom - About";
 
 const career = [
   {
     duration: 'July 2023 - Mar 2025',
     compLink: 'https://www.linkedin.com/company/cleva-banking/posts/?feedView=all',
-    comp: 'Cleva Technlogies',
+    comp: 'Cleva Technologies',
     title: 'Software Engineer, Frontend',
     bullets: [
-      'contributed to website',
-      'built virtual USD card end-to-end'
+    'Joined 2 months pre-launch as 1 of 2 frontend engineers; helped ship the MVP.',
+      'Built and shipped key features including Virtual USD Cards, Referrals, and Spending Limits.',
+      'Optimized website performance, resulting in 100k+ organic visitors.'
     ],
-    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+    technologies: 'React/Next.js, Typescript, Tailwind, Redux, Wordpress CMS, GraphQL'
   },
   {
     duration: 'April 2021 - May 2023',
@@ -22,10 +32,11 @@ const career = [
     comp: 'The Mullings Group',
     title: 'Software Engineer',
     bullets: [
-      '',
-      ''
+    'Built Goat SaaS, the company’s flagship project management tool.',
+      'Led frontend on two health-tech and real estate platforms.',
+      'Improved accessibility across all apps to meet WCAG standards.'
     ],
-    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+    technologies: 'HTML/CSS/Javascript, MeteorJs, React.js, Bootstrap, SCSS'
   },
   {
     duration: 'Oct 2020 - Dec 2020',
@@ -33,10 +44,11 @@ const career = [
     comp: 'DevCareer',
     title: 'Frontend Engineer - Internship',
     bullets: [
-      '',
-      ''
+    'Contributed to the DevCareer community platform during early development.',
+    'Built blog and documentation pages using React and Gatsby.',
+    'Collaborated closely with mentors and designers in an async remote setup.'
     ],
-    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+    technologies: 'React.js, Gatsbyjs, GraphQL, Netlify'
   },
   {
     duration: 'Jan 2020 - Sept 2020',
@@ -44,130 +56,149 @@ const career = [
     comp: 'Voip55',
     title: 'Technical Developer - Internship',
     bullets: [
-      '',
-      ''
+    'Designed and built an internal tool for managing customer data and revenue tracking.',
     ],
-    technologies: 'Technologies used: MeteorJs, React.Js, Bootstrap, SCSS'
+    technologies: 'HTML/CSS/Javascript, Python/Flask, Git/Github, Heroku, Mongodb'
   },
 ]
 
 ---
 <Layout>
 
-    <section class="about">
+    <div class="about">
 
-      <h2>Hi, I'm Blossom.</h2>
-      <!-- <img class="me-img" src={Blossom.src} alt=""> -->
-       <div class="about-inner">
+      <section>
+        <h2 class="about-heading">Now.</h2>
+        <p>Over the past 4 years, I've been building and scaling frontend applications for fast-paced startups, helping products grow to hundreds of thousands of users.</p>
+        <p>
+          I work across the stack with tools like JavaScript, TypeScript, React/Next.js, HTML, CSS/Tailwind/SCSS, Node.js, Flask, Express, PostgreSQL, MongoDB, AWS and heroku.
+        </p>
+        <p>
+          I enjoy working at the intersection of product, user experience, design and code. All of which give me a holistic insight into developing products that both solve a problem and is a delight to use. </p>
+      </section>
+
+      <section class="about-background">
+         <h2 class="about-heading">Quick Backgrund story.</h2>
          <p>
-           As a child, action movies were <i>(and remain)</i> my favorite things to watch. I watched the entire <a href="https://en.wikipedia.org/wiki/Spy_Kids" target="_blank">spy kids franchise </a>till the CD cracked, and it was sometime during that rendezvous I decided I wanted to become an hacker.
+           I enjoyed action movies as a child <i>(I still do and I take recommendations)</i>. One holiday break, I watched the entire <a href="https://en.wikipedia.org/wiki/Spy_Kids" target="_blank">spy kids franchise </a>till the CD cracked. Some point during the movie, I decided I wanted to become a hacker.
          </p>
-   
-         <p>My mom took me to the <a href="https://www.niit.com/NIGERIA" target="_blank">biggest technical skills school in Lagos</a> at the time to learn "hacking" <i>(they called the course cybersecurity - but hacker is much cooler).</i> (Un)fortunately I didn't pass the entrance exam and settled for the closest coolest thing - computer science (at another institute).</p>
-   
-         <p> 4 years later and I'm still as intrigued with the world of software.</p>
-       </div>
+         <p>Cybersecurity wasn't as cool (or accessibile) back then. I also didn't have access to a laptop to explore this "tech itch". So when it was time to study, I chose the next best thing, <b>computer science.</b></p>
+
+       </section>
   
-    <h3>Career Timeline.</h3>
+       <section>
+         <h2 class="about-heading">Work.</h2>
+             <aside class="timeline-container">
+               {career.map((item) => (
+                 <div class="t-grid">
+               <div>
+                 <p class="t-grid-time">{item.duration}</p>
+                 <div class="t-grid-animation"></div>
+               </div>
+               <div >
+                 <details class="custom-details" name="work">
+                 <summary>{item.title} </summary>
+                 <div class="career-context details-content">
+                   <ul>
+                     {item.bullets.map((task) => (
+                       <li>{task}</li>
+                     ))}
+                   </ul>
+                   <p>
+                     <b>Technologies: </b>{item.technologies}
+                   </p>
+         
+                 </div>
+                 </details>
+                 <p class="company"><a href={item.compLink}>{item.comp}</a></p>
+               </div>
+             </div>
+               ))}
+             </aside>
+             <div class="other-exp">
+               <details name="work">
+                 <summary>Other Notable experiences</summary>
 
-    <aside class="timeline-container">
-      {career.map((item) => (
-        <div class="t-grid">
-      <div>
-        <p class="t-grid-time">{item.duration}</p>
-        <div class="t-grid-animation"></div>
-      </div>
-      <div >
-        <details>
-        <summary>{item.title} </summary>
-        <div class="career-context">
-          <ul>
-            {item.bullets.map((task) => (
-              <li>{task}</li>
-            ))}
-          </ul>
-          <p>
-            {item.technologies}
-          </p>
+                 <p><strong>Galaxy Backbone - Service Desk Analyst</strong></p>
+<p>Completed Nigeria's mandatory one-year national service (NYSC), supporting IT infrastructure and end-user systems for government agencies.</p>
+               </details>
+             </div>
+       </section>
 
-        </div>
-        </details>
-        <p><a href={item.compLink}>{item.comp}</a></p>
-      </div>
-    </div>
-      ))}
-    </aside>
+<section class="technologies">
+  <div>
+    <h3>Technologies.</h3>
+    <p>Frontend: </p>
+    <p>Backend: </p>
+    <p>Deployment: </p>
+    <p>Productivity Tools: </p>
+  </div>
+</section>
 
+
+
+<div class="images">
+  <img src={Brilliant.src} alt="" srcset="">
+  <img src={Cute.src} alt="" srcset="">
+  <img src={Duo.src} alt="" srcset="">
+  <img src={Elevate.src} alt="" srcset="">
+  <img src={Office.src} alt="" srcset="">
+  <img src={Outing.src} alt="" srcset="">
+  <img src={Youversion.src} alt="" srcset="">
+  <img src={ztm.src} alt="" srcset="">
+</div>
+
+  <section class="random">
+    <h2 class="about-heading">A Few Random Things.</h2>
+    <ul>
+      <li>I enjoy taking walks, especially forest hikes</li>
+      <li>Serial streak-keeper — I collect streaks like my life depends on it</li>
+      <!-- <li>I love challenges and community. I am currently on my 26th day <i class="tmps">(timestamp: april 18 2025)</i> of <b>75 hard</b></li> -->
+      <li>I looove history, world politics and political commentary <i>(no, I won't be sharing my favorite commentators).</i></li>
+      <li>I have an A2 level of proficiency in french</li>
+      <!-- <li>I genuinely enjoy math. Fun fact, in my first semester at <b>George Brown College</b>, of the 6 courses I took, my highest grade was in MATH (98/100. So I also had 98 in my communications but it doesn't fit this agenda)</li> -->
+      <li>I genuinely enjoy math. Fun fact: I scored 98/100 in my first-semester math course at <b>George Brown College</b>.</li>
+      <li>I get obsessed with fiction. I finished the entire Hunger Games trilogy in 2 days. As a rule, I only read fiction during vacations, for my sanity.</li>
+    </ul>
+  </section>
     
+  <aside class="about-sidenav">
+    <ul>
+      <li>- - -</li>
+      <li><a href="/archive">Archives</a></li>
+      <li><a href="/library">Library</a></li>
+      <li><a href="/others">Others.</a></li>
+   
+    </ul>
   
-    <details>
-      <summary>Other interesting experiences</summary>
-      <p>Galaxy Backbone, A mandatory 1-year service experience in Nigeria, as a customer service representative</p>
-    </details>
-
-
- 
-      <aside class="about-sidenav">
-        <ul>
-          <li>- - -</li>
-          <li><a href="/archive">Archives</a></li>
-          <li><a href="/library">Library</a></li>
-          <li><a href="/others">Others.</a></li>
-       
-        </ul>
-
-    </aside>
-
+  </aside>
+</div>
 </Layout>
 
 <style>
-
-  .about{
-    heig
+ 
+.random ul{
+  padding-left: 1rem;
+}
+  .about-heading{
+    font-family: "Dancing Script", cursive;
   }
-
-  /* .t-grid-animation{
-    position: relative;
-  width: 2px;
-  height:4rem;
-  background-color: red;
-  } */
-
-  /* .t-grid-animation::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  background-color: #333;
-  transform: translateX(-50%);
-  animation: growLine .5s ease-in-out forwards;
-} */
 
 .timeline-container{
   display:grid;
   gap:1rem;
 }
 
-@keyframes growLine {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 100%;
-  }
-}
+  .company{
+    margin: .2rem;
 
- .career-context{
-  /* display: none; */
- }
-  .about-inner p{
-    line-height: 20px;
-    width: 550px;
   }
-  .about-inner a{
-    color:#A37643;
+  .company a{
+
+    color: #000;
+  }
+  .about-background a{
+    color:#785730;
   }
 
   details{
@@ -181,15 +212,14 @@ const career = [
 }
 .t-grid{
   display: grid;
-  grid-template-columns: 150px 1fr;
   align-items: start;
   position: relative;
 }
-  .about-sidenav{
-    position: absolute;
-    right: 300px;
-    bottom:4rem;
+
+.about-sidenav{
+   margin-top: 5rem;
   }
+
   .about-sidenav ul{
    /* list-style-type: none; */
    display: grid;
@@ -214,7 +244,110 @@ const career = [
 
   .about{
     font-size: 14px;
+    line-height: 22px;
     color: #2b2b2b;
+    position: relative;
+  }
+
+  .other-exp{
+    margin-top: 1rem;
+  }
+  .other-exp summary{
+   font-weight: bold;
   }
   
+  .technologies{
+    display: none;
+  }
+
+  .tmps{
+    font-size: 10px;
+  }
+
+.images{
+  margin-top: 2rem;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:.3rem;
+}
+
+  .images img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    cursor: pointer;
+  }
+  .images img:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+
+  /* .career-context ul{
+    margin: .5rem;
+    padding: .5rem;
+  } */
+
+ /* summary::marker{
+  
+ color: hsl(0, 0%, 40%);
+ } */
+
+ details{
+}
+
+details::details-content{
+   overflow:hidden;
+  block-size: 0;
+  display: block;
+  transition-property: block-size, content-visibility;
+  transition-duration: 1s;
+  transition-behavior: allow-discrete;
+ }
+details[open]::details-content{
+
+  block-size: auto;
+  block-size: calc-size(auto);
+
+ }
+
+
+ @media screen and (min-width:600px) {
+  .images{
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .t-grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: start;
+  }
+
+  .random ul{
+  padding-left:revert;
+  }
+
+ }
+ @media screen and (min-width:425px) {
+  .images img{
+    height:120px
+  }
+ }
+ @media screen and (min-width:768px) {
+
+  .about{
+    width:90%;
+  }
+
+  .about-sidenav{
+    position: absolute;
+    right: -7rem;
+    bottom:0;
+  }
+
+ 
+
+}
+
 </style>

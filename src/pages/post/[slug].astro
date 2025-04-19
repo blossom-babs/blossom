@@ -29,12 +29,10 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const {frontmatter, default:Content} = post
-
-console.log(frontmatter, Content)
 ---
 
 <Layout>
-  <div>Bac</div>
+  <button> <Icon name="mdi:chevron-left"/></button>
 <article>
     <h1>{frontmatter.title}</h1>
     <Content/>

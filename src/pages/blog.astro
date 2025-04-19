@@ -1,10 +1,11 @@
 ---
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro"
 
 const allPosts = Object.entries(
   import.meta.glob('../pages/posts/*.md', { eager: true })
 ).map(([path, post]) => {
-  const slug = path.replace('../pages/posts/', '').replace('.md', '');
+  const slug = path.replace('./posts/', '').replace('.md', '');
   return {
     ...(post as any),
     slug
@@ -22,19 +23,28 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
   return acc;
 }, {});
 
+console.log(postsByMonth)
 ---
 <Layout>
 
-  <div>
+  <div class="blog">
   
 
 
         {Object.entries(postsByMonth).map(([month, posts]) => (
           <section>
-            <h2>{month}</h2>
+            <h2 class="blog-month">{month}</h2>
             <ul>
               {posts.map((post) => (
-                <li><a href={`/post/${post.slug}`}>{post.frontmatter.title}</a></li>
+                <li><a href={`/post/${post.slug}`}>
+                <div>
+                  <h3>   {post.frontmatter.title}</h3>
+                  <p> {post.frontmatter.description}</p>
+                  <button> read more<Icon name="mdi:arrow-right"/> </button>
+                </div>
+             
+                
+                </a></li>
               ))}
             </ul>
           </section>
@@ -44,5 +54,50 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
 </Layout>
 
 <style>
-    
+
+  .blog ul, li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .blog ul{
+   display: grid;
+   gap: 1.5rem;
+  }
+    .blog a{
+      text-decoration: none;
+      color: #2b2b2b;
+    }
+    .blog a h3{
+   font-size: 16px;
+    }
+    .blog a p{ 
+      font-size: 14px;
+      line-height: 25px;
+      width:90%;
+      /* padding: 0;
+      margin: 0; */
+    }
+    .blog a button{ 
+      border:none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: transparent;
+      color: #A37643;
+    }
+
+    .blog a button:hover{ 
+      text-decoration: underline;
+     
+    }
+
+    .blog{
+      color: #2b2b2b;
+    }
+
+    .blog-month{
+     font-size: 16px;
+     text-decoration: underline;
+    }
 </style>

@@ -1,3 +1,7 @@
+:root{
+  interpolate-size: allow-keywords;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -50,12 +54,15 @@ nav ul {
 footer {
   display: flex;
   justify-content: space-between;
+flex-direction: column;
 
-  align-items: center;
+  
   font-size: 12px;
   margin-top: auto;
   padding: 1rem 0;
   font-size: 14px;
+
+  padding-top: 140px;
 }
 
 footer p {
@@ -67,6 +74,7 @@ footer ul {
   list-style-type: none;
   display: flex;
   gap: 0.5rem;
+  padding: 0;
 }
 footer ul li a {
   text-decoration: underline;
@@ -88,6 +96,10 @@ padding-top: 1rem;
 
   footer {
     width:640px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   }
 
   .featured-main p{

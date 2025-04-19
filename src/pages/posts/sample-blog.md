@@ -1,5 +1,5 @@
 ---
-title: 'My First Blog Post'
+title: 'The Astro Sample Blog'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
@@ -8,7 +8,7 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
+# The Astro Sample Blog
 
 Published on: 2022-07-01
 
