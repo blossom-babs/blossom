@@ -1,29 +1,56 @@
 ---
-import '../styles/global.css';
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Featured from '../components/Featured.astro';
-import { Icon } from 'astro-icon/components';
-const pageTitle = "Blossom - Home"
-
-
-
+import "../styles/global.css";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Featured from "../components/Featured.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Blossom - Home";
 ---
 
-<Layout >
-<div class="main">
-	<Featured/>
+<Layout>
+  <div class="main">
+    <section>
+	 <h1>Hi, I'm Blossom.</h1>
+      <p class="">
+       You found your way to my corner on the internet, welcome! I'm a Lifelong learner and builder. Currently working as frontend engineer building functional and scalabale digital experience
+        across the web.
+      </p>
+   
+    </section>
 
-	
-</div>
+	<section class="featured">
+		<h2>Featured Blog Posts.</h2>
+		<Featured />
+		
+  </div>
 </Layout>
 
-
 <style>
+  .main {
+    padding-top: 1rem;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2b2b2b;
 
-	.main{
-		padding-top: 1rem;
-	}
+  }
 
-	
+  .main h1 {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .featured{
+	margin-top: 3rem;
+  }
+  .featured h2{
+	font-weight: 700;
+	font-size: 18px;
+  }
+
+  @media screen and (min-width:768px) {
+	.main {
+    
+	width: 80%;
+  }
+}
 </style>

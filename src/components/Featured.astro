@@ -1,54 +1,93 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const allPosts = Object.entries(import.meta.glob('../pages/posts/*.md', {eager: true})).map( ([path, post]) => {
-   
-    const slug = path
-  .replace('../pages/posts/', '') // include trailing slash
-  .replace('.md', '');
-    return { ...(post || {}), slug }
-}
+const allPosts = Object.entries(
+  import.meta.glob("../pages/posts/*.md", { eager: true })
+).map(([path, post]) => {
+  const slug = path
+    .replace("../pages/posts/", "") // include trailing slash
+    .replace(".md", "");
+  return { ...(post || {}), slug };
+});
+const featuredPost = allPosts.filter(
+  (post: any) => post.frontmatter.featured && post.frontmatter.main
+);
 
-)
-const featuredPost = allPosts.filter((post:any) => post.frontmatter.featured && post.frontmatter.main)
-
-const otherPosts = allPosts.filter((post:any) => post.frontmatter.featured && !post.frontmatter.main)
-
-
+const otherPosts = allPosts.filter(
+  (post: any) => post.frontmatter.featured 
+);
 ---
 
-<div class="featured">
-  
-<article class="featured-main">
-    {featuredPost.map((post:any) => (
+
+  <article class="featured-main">
+    <!-- {
+      featuredPost.map((post: any) => (
         <a href={`/post/${post.slug}`}>
-        <img src={post.frontmatter.image.url} alt={post.frontmatter.alt} srcset="">
-        <p>{post.frontmatter.title} <Icon name="mdi:arrow-top-right"/> </p>
+          <img
+            src={post.frontmatter.image.url}
+            alt={post.frontmatter.alt}
+            srcset=""
+          />
+          <p>
+            {post.frontmatter.title} <Icon name="mdi:arrow-top-right" />{" "}
+          </p>
         </a>
-    ))}
+      ))
+    } -->
 
-    <ul class="other-posts">
-		{otherPosts.map((post:any) => (
-			<li><a href={`/post/${post.slug}`}>{post.frontmatter.title}</a> <Icon name="mdi:arrow-top-right"/> </li>
-		))}
-	</ul>
-</article>
+    <ul class="featured-blog">
+      {
+        otherPosts.map((post: any) => (
+          <li>
+            <a href={`/post/${post.slug}`}>
+              <div>
+                <h3> {post.frontmatter.title}</h3>
+                <p> {post.frontmatter.description}</p>
+                <button class="read-more">
+                  {" "}
+                  read more
+                  <Icon name="mdi:arrow-right" />{" "}
+                </button>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
 
-</div>
 
 <style>
 
-    .other-posts{
-		padding-top: 4rem;
-		margin: 0;
-		display: grid;
-		gap: .8rem;
 
-	}
+  .featured-blog{
+    display:grid;
+    gap:.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .featured-blog h3,  .featured-blog p{
 
-.other-posts li a{
-	color: #2b2b2b;
+    margin: 0;
+    padding: 0;
+  }
+  .featured-blog a{
+    color: #2b2b2b;
+   text-decoration: none;
+  }
+  .featured-blog h3{
+   /* font-weight: 500; */
+   padding-bottom: .1rem;
+  }
+  .featured-blog p{
+   /* font-size: 14px;
+   line-height: 20px; */
+   font-weight: 400;
+  }
 
-}
+  .featured-blog li{
+    background-color: #FAFAFA !important;
+  }
 
+ 
 </style>
