@@ -3,6 +3,7 @@ import { Icon } from 'astro-icon/components'
 import '../styles/global.css'
 const {pageTitle} = Astro.props
 const currentYear = new Date().getFullYear()
+import Footer from '../components/Footer.astro'
 ---
 <!doctype html>
 <html lang="en">
@@ -37,39 +38,7 @@ const currentYear = new Date().getFullYear()
 				</div>
 			</main>
 	
-			<footer>
-				<p>copyright &copy; 2025 - {currentYear}</p>
-				
-	
-				<ul>
-				
-					
-					<li><a href="mailto:blossombab.swe@gmail.com">
-						<!-- <Icon name="mdi:mail-outline"/> -->
-						 book a call
-					</a></li>
-					<li><a href="mailto:blossombab.swe@gmail.com">
-						<!-- <Icon name="mdi:mail-outline"/> -->
-						 email
-					</a></li>
-					<li><a href="https://github.com/blossom-babs">
-						<!-- <Icon name="mdi:github"/> -->
-						 github
-					</a></li>
-					<li><a href="https://www.linkedin.com/in/blossom-babalola/">
-						<!-- <Icon name="mdi:linkedin"/> -->
-						 linkedin
-					</a></li>
-					<!-- <li><a href="https://www.linkedin.com/in/blossom-babalola/">
-						 <Icon name="mdi:twitter"/> 
-					</a></li> -->
-					<!-- <li><a href="https://www.linkedin.com/in/blossom-babalola/">
-						<Icon name="mdi:youtube"/>
-					</a></li> -->
-					
-					
-				</ul>
-			</footer>
+			<Footer/>
 		</div>
 	</body>
 </html>

@@ -1,10 +1,161 @@
 ---
 import { Icon } from "astro-icon/components";
-import Layout from "../layouts/Layout.astro";
----
+import { UtilsProjects } from "../utils";
+import '../styles/global.css'
+import Footer from "../components/Footer.astro";
 
-<Layout>
-    <div>
-        <p>Coming soon  <Icon name="mdi:hammer-screwdriver"/></p>
+---
+<!-- 
+{work.github && <button>Github</button>}
+{work.liveLink && <button>Try it </button>} -->
+<!-- <Layout> -->
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width" />
+            <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+            <meta name="generator" content={Astro.generator} />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+            <title>Projects</title>
+        </head>
+        <body>
+            
+ <section class="work-section">
+    <div class="work">
+        <p>Projects.</p>
+        <ul class="work-list">
+
+        {
+            UtilsProjects.map((work) => (
+                <li>
+                <img src={work.imgRef} alt="">
+                <hr/>
+                <ul class="work-bullets">
+                    {work.stack.split(',').map(item => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+                <div class="work-content">
+
+                <h3>{work.title}</h3>
+               <p>{work.description}</p>
+               <div class="space-buttons">
+               {work.github && <button>Github</button>}
+
+{work.liveLink && <button>Try it </button>}
+               </div>
+                </div>
+                </li>
+            ))}
+        </ul>
+    <Footer/>
     </div>
-</Layout>
+ </section>
+        </body>
+        </html>
+// </Layout>
+
+<style>
+
+    
+ body{
+  background-color: #faf9f7;;
+margin: 0;
+font-family: "Geist", sans-serif;
+}
+
+.work-section{
+   font-size: 14px;
+}
+    .work{
+        width: 90%;
+        margin: 0 auto;
+     
+    }
+
+    .space-buttons{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        justify-content: center;
+       
+    }
+.work img{
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+    }
+
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin:0;
+    padding: 0;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.work-content button{
+      border: 1px solid #96999f;  
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      padding: .3rem .8rem;
+      cursor: pointer;
+}
+.work-list > li{
+    border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.work-bullets{
+    list-style: none;
+    margin: 0;
+    padding:  0;
+display: flex;
+flex-wrap: wrap;
+gap: .5rem;
+padding-top: .5rem;
+}
+
+.work-bullets li{
+     background-color: #f3f4f6; /* Tailwind gray-100 */
+  color: #1f232a;            /* Tailwind gray-900 */
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;      /* pill shape */
+  font-size: 0.875rem;       /* small, readable */
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.work-content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+   
+}
+
+@media screen and (min-width:768px) {
+    .work-list{
+  
+    grid-template-columns: repeat(2, 1fr);
+ 
+}
+}
+@media screen and (min-width:1140px) {
+    .work-list{
+  
+    grid-template-columns: repeat(3, 1fr);
+ 
+}
+}
+</style>

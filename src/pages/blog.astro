@@ -23,14 +23,10 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
   return acc;
 }, {});
 
-console.log(postsByMonth)
 ---
 <Layout>
 
   <div class="blog">
-  
-
-
         {Object.entries(postsByMonth).map(([month, posts]) => (
           <section>
             <h2 class="blog-month">{month}</h2>
@@ -42,8 +38,6 @@ console.log(postsByMonth)
                   <p> {post.frontmatter.description}</p>
                   <button class="read-more"> read more<Icon name="mdi:arrow-right"/> </button>
                 </div>
-             
-                
                 </a></li>
               ))}
             </ul>
