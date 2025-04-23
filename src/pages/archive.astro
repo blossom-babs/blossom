@@ -1,45 +1,16 @@
 ---
 import '../styles/global.css';
 import { Icon } from "astro-icon/components";
-import Layout from "../layouts/Layout.astro";
-import hashnodeImg from "../assets/hashnode.png";
-import devto from "../assets/devto.png";
-import firstPortfolio from "../assets/first-portfolio.png"
-
-const data = [
-    {
-        img: hashnodeImg,
-        title: 'Hashnode blog',
-        content: "79 draft and 20 articles later. I maintained this blog for nearly 4 years and I thought it would be my personal spot on the internet forever. The mere reason that you're here is proof that we all evolve, and so do our desires.",
-        link: 'https://blossom.hashnode.dev/'
-    },
-    {
-        img: devto,
-        title: 'Dev.to blog',
-        content: "79 draft and 20 articles later. I maintained this blog for nearly 4 years and I thought it would be my personal spot on the internet forever. The mere reason that you're here is proof that we all evolve, and so do our desires.",
-        link: "https://dev.to/blossom"
-    },
-    {
-        img: firstPortfolio,
-        title: 'My first ever portfolio',
-        content: "Hey, it got me my first internship at Voip55.",
-        link: "https://blossom-babs.github.io/portfolio-two/"
-    },
-    {
-        img: firstPortfolio,
-        title: 'A contact card I found when I googled my name',
-        content: "I no longer have access to this contact card so I cannot update any outdated information.",
-        link: "https://linktr.ee/BlossomBabalola"
-    },
-]
+import ArchiveLayout from '../layouts/ArchiveLayout.astro';
+import {UtilsArchive} from '../utils'
 ---
 
-<Layout>
+<ArchiveLayout>
     <div class="cont">
         <h1 class="about-heading">You found the archive. </h1>
       
         <div class="archive-grid">
-            {data.map((item, index) => (
+            {UtilsArchive.map((item) => (
 <article>
     <img src={item.img.src} alt="hashnode blog">
 <div class="article-content">
@@ -56,15 +27,28 @@ const data = [
        
         </div>
     </div>
-</Layout>
+     <aside class="about-sidenav">
+    <ul>
+      <li>- - -</li>
+      <li><a href="/archive">Archives</a></li>
+      <li><a href="/library">Library</a></li>
+      <li><a href="/others">Others.</a></li>
+   
+    </ul>
+  
+  </aside>
+</ArchiveLayout>
 
 <style>
     .cont{
         margin-top: 1rem;
     }
+    a{
+        color: #333;
+    }
 
     .cont h1{
-        color: #333333;
+        color: #1A1A1A;
         font-size: 16px;
         font-weight: 400;
     }
@@ -73,7 +57,7 @@ const data = [
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1rem;
     column-gap: 1rem;
-    width: 640px
+   
 
 }
 
@@ -93,6 +77,7 @@ article{
     display: flex;
     flex-direction:column;
     align-items: center;
+    
   
 }
 
@@ -105,12 +90,7 @@ article{
     text-align:center;
 }
 
-{/* background-color: #e0d7cd; 
-  color: #232222;           
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;      
-  font-size: 0.875rem;       
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05); */}
+.article-content p{
+    font-size:14px;
+}
 </style>

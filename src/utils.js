@@ -1,3 +1,7 @@
+import firstPortfolio from "./assets/first-portfolio.png"
+import hashnodeImg from "./assets/hashnode.png";
+import devto from "./assets/devto.png";
+import contactcard from "./assets/contact-card.png";
 export const UtilsProjects = [
     {
         title: 'Distraction Blocker - Chrome extension',
@@ -80,6 +84,32 @@ export const books = {
     ]
   };
 
+  export const UtilsArchive  = [
+      {
+          img: hashnodeImg,
+          title: 'Hashnode blog',
+          content: "I wrote here for nearly 4 years—79 drafts, 20 published posts. At the time, it felt like my forever corner of the web. But if you're reading this now, it means things change. I did too.",
+          link: 'https://blossom.hashnode.dev/'
+      },
+      {
+          img: devto,
+          title: 'Dev.to blog',
+          content: "The first public home for my thoughts. It's quieter now, but every post still tells a story of what I was learning and unlearning.",
+          link: "https://dev.to/blossom"
+      },
+      {
+          img: firstPortfolio,
+          title: 'My first ever portfolio',
+          content: "It's rough around the edges, and I am not but proud of it, but it somehow landed me my first internship at Voip55. Proof that you don't need perfection, just progress.",
+          link: "https://blossom-babs.github.io/portfolio-two/"
+      },
+      {
+          img: contactcard,
+          title: 'A contact card I found when I googled my name',
+          content: "I no longer have access to this page, so some info are outdated. Still, it's a curious relic of my earlier web presence.",
+          link: "https://linktr.ee/BlossomBabalola"
+      },
+  ]
   
 /*
 useEffect; when, where, how and why to use it

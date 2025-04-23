@@ -40,12 +40,28 @@ import Footer from '../components/Footer.astro'
 				</div>
 			</main>
 	
-			<div class="fixed-footer">
+			<div class="">
 				<Footer/>
 			</div>
 		</div>
 
 	</body>
 </html>
+
+<style>
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin:2rem auto 0;
+  }
+}
+	</style>
+
 
 
