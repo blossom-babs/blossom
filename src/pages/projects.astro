@@ -4,6 +4,7 @@ import { UtilsProjects } from "../utils";
 import '../styles/global.css'
 import Footer from "../components/Footer.astro";
 
+
 ---
 <!-- 
 {work.github && <button>Github</button>}
@@ -25,7 +26,9 @@ import Footer from "../components/Footer.astro";
             
  <section class="work-section">
     <div class="work">
-        <p>Projects.</p>
+        <button class="go-back" onclick="history.back()"> <Icon name="mdi:arrow-left"/> Back to home</button>
+
+        <h1>Projects &#x1F33C;</h1>
         <ul class="work-list">
 
         {
@@ -40,7 +43,7 @@ import Footer from "../components/Footer.astro";
                 </ul>
                 <div class="work-content">
 
-                <h3>{work.title}</h3>
+                <h2>{work.title}</h2>
                <p>{work.description}</p>
                <div class="space-buttons">
                {work.github && <button>Github</button>}
@@ -56,7 +59,7 @@ import Footer from "../components/Footer.astro";
  </section>
         </body>
         </html>
-// </Layout>
+
 
 <style>
 
@@ -67,8 +70,14 @@ margin: 0;
 font-family: "Geist", sans-serif;
 }
 
+button{
+    
+    font-family: "Geist", sans-serif;
+}
+
 .work-section{
    font-size: 14px;
+   padding-top: 1.5rem;
 }
     .work{
         width: 90%;
@@ -126,8 +135,8 @@ padding-top: .5rem;
 }
 
 .work-bullets li{
-     background-color: #f3f4f6; /* Tailwind gray-100 */
-  color: #1f232a;            /* Tailwind gray-900 */
+     background-color: #e0d7cd; /* Tailwind gray-100 */
+  color: #232222;            /* Tailwind gray-900 */
   padding: 0.3rem 0.75rem;
   border-radius: 999px;      /* pill shape */
   font-size: 0.875rem;       /* small, readable */
@@ -142,6 +151,22 @@ padding-top: .5rem;
     text-align: center;
     padding: 1rem;
    
+}
+
+.go-back{
+    border: none;
+    cursor:pointer;
+    font-size: 16px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: .3rem;
+}
+
+h1{
+    color: #a37643;
+    font-size: 16px;
 }
 
 @media screen and (min-width:768px) {

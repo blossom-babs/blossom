@@ -64,3 +64,26 @@ export const UtilsProjects = [
         imgRef: "https://i.imgur.com/7x9TKhZ.png"
     },
 ]
+
+export const books = {
+    2025: [
+      {
+        title: "",
+        rating: ""
+      }
+    ],
+    "All Time": [
+      {
+        title: "",
+        rating: ""
+      }
+    ]
+  };
+
+  
+/*
+useEffect; when, where, how and why to use it
+Accessibility 101 - buttons, tab, semantics
+Great engineer !== Great interviewer. Interviewing has its own set of skills
+-- clean up API calls
+*/

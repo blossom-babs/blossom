@@ -89,14 +89,19 @@ footer ul li a:hover {
 padding-top: 1rem;
 }
 
+
+
 @media screen and (min-width: 768px) {
   .container {
     width: 640px;
     margin:2rem auto 0;
   }
 
+  .fixed-footer{
+    width: 640px;
+  }
+
   footer {
-    width:640px;
     display: flex;
     justify-content: space-between;
     align-items: center;
