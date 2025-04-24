@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { books } from "../utils"
+
+// Ensure books is structured correctly
+// Example structure: { "2023": [{ title: "Book 1" }, { title: "Book 2" }] }
+---
+
+        Object.entries(books).map(([year, booklist]) => (
+
+    {
+        Object.entries(books).map(([year, booklist]) => (
+            <>
+            <h1>{year}</h1>
+            {
+                booklist.map((entry) => (
+                    <div>
+                        <p>{entry.title}</p>
+                        <p>{entry.title}</p>
+                    </div>
+                ))
+            }
+            </>
+        ))
+    }
+</Layout>

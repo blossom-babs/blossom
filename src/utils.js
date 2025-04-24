@@ -70,17 +70,211 @@ export const UtilsProjects = [
 ]
 
 export const books = {
-    2025: [
+    "2025": [
       {
-        title: "",
-        rating: ""
-      }
+        title: "Outliers",
+        author: "Malcolm Gladwell",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Can't hurt me",
+        author: "David Goggins",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "The Lombardi rules",
+        author: "Vincent Lombardi",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "CHAOS- Charles Manson, the CIA, and the secret history of the sixties ",
+        author: "Tom O'Neill",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Born a crime ",
+        author: "Trevor Noah",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Men are from mars, women are from venus",
+        author: "John Gray",
+        genre: "Non-fiction",
+        rating: 2,
+img: "",
+link:""        
+      },
+      {
+        title: "Atomic habit",
+        author: "James clear",
+        rating: 5,
+img: "",
+link:""        
+      },
+    ],
+    "2024": [
+      {
+        title: "The 7 habit of highly effective people",
+        author: "Stephen R.Covey",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "The 8th habit",
+        author: "Stephen R.Covey",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Failing forward",
+        author: "John C. Maxwell",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "The Scarlett Thread ",
+        author: "Francine Rivers",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Single On Purpose ",
+        author: "John Kim",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Redeeming Love",
+        author: "Francine Rivers",
+        rating: 2,
+img: "",
+link:""        
+      },
+      {
+        title: "Le Petit Prince",
+        author: "",
+        rating: 2,
+img: "",
+link:""        
+      },
+      {
+        title: "Your Money or Your Life",
+        author: "Vicki Robin",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "StoryWorthy",
+        author: "Matthew Dicks",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Lost and found",
+        author: "Sarah Jakes Robert",
+        rating: 5,
+img: "",
+link:""        
+      },
+      {
+        title: "Night flight to Paris",
+        author: "Cara Black",
+        rating: 5,
+        genre: "Fiction",
+img: "",
+link:""        
+      },
+      {
+        title: "Three hours in Paris",
+        author: "Cara Black",
+        rating: 5,
+        genre: "Fiction",
+img: "",
+link:""        
+      },
+      {
+        title: "Yellowface",
+        author: "R.F Kuang",
+        rating: 5,
+        genre: "Fiction",
+img: "",
+link:""        
+      },
     ],
     "All Time": [
       {
-        title: "",
-        rating: ""
-      }
+        title: "Deep work",
+        rating: "Cal Newport",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "So good they can't ignore you",
+        rating: "Cal Newport",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "Mastery",
+        rating: "",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "Mastery",
+        rating: "",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "Divergent Trilogy",
+        author: "Veronica Roth",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "Layla",
+        author: "Colleen Hoover",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "Hunger games trilogy",
+        author: "",
+        rating: 5,
+        img: "",
+        link:""   
+      },
+      {
+        title: "How not to die alone",
+        author: "",
+        rating: 5,
+        img: "",
+        link:""   
+      },
     ]
   };
 
