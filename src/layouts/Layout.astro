@@ -4,6 +4,7 @@ import '../styles/global.css'
 const {pageTitle} = Astro.props
 const currentYear = new Date().getFullYear()
 import Footer from '../components/Footer.astro'
+import Analytics from '@vercel/analytics/astro'
 ---
 <!doctype html>
 <html lang="en">
@@ -39,6 +40,8 @@ import Footer from '../components/Footer.astro'
 			</main>
 	
 			<div class="fixed-footer">
+				
+			<Analytics/>
 				<Footer/>
 			</div>
 		</div>
