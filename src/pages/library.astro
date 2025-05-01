@@ -1,26 +1,82 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import { books } from "../utils"
+import { Icon } from "astro-icon/components";
+import ArchiveLayout from "../layouts/ArchiveLayout.astro";
+import { books } from "../utils";
 
 // Ensure books is structured correctly
 // Example structure: { "2023": [{ title: "Book 1" }, { title: "Book 2" }] }
 ---
 
-        Object.entries(books).map(([year, booklist]) => (
-
+<ArchiveLayout>
+  <section class="library">
     {
-        Object.entries(books).map(([year, booklist]) => (
-            <>
-            <h1>{year}</h1>
-            {
-                booklist.map((entry) => (
-                    <div>
-                        <p>{entry.title}</p>
-                        <p>{entry.title}</p>
+      Object.entries(books).sort(([yearA], [yearB]) => {
+        const order = ['2025', '2024', 'All Time']
+        return order.indexOf(yearA) - order.indexOf(yearB);
+      }).map(([year, booklist]) => (
+        <article class="">
+          <h1>{year}</h1>
+          <div class="library-grid">
+            {booklist.map((entry) => {
+        
+              return (
+                <div class="book-entry">
+                  <img src={entry.img.src} alt={entry.title} />
+                  <div class="book-entry_details">
+                    <p>{entry.title}</p>
+                    <p>{entry.author}</p>
+                    <div class="rating">
+                      {Array.from({ length: entry.rating }, (_, i) => i).map(
+                        (_) => (
+                          <Icon name="mdi:star" />
+                        )
+                      )}
                     </div>
-                ))
-            }
-            </>
-        ))
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </article>
+      ))
     }
-</Layout>
+  </section>
+</ArchiveLayout>
+
+<style>
+  .library {
+    color: #282a36;
+  }
+  .rating {
+    display: flex;
+  }
+  .rating svg {
+    display: flex;
+    color: #a37643;
+
+  }
+
+  .book-entry img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .book-entry_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .book-entry_details p {
+    margin: 0;
+  }
+  .book-entry_details p:nth-child(1) {
+    font-weight: bold;
+  }
+  .book-entry_details p:nth-child(2) {
+    padding: 0.5rem 0;
+  }
+</style>

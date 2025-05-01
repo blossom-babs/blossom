@@ -2,6 +2,47 @@ import firstPortfolio from "./assets/first-portfolio.png"
 import hashnodeImg from "./assets/hashnode.png";
 import devto from "./assets/devto.png";
 import contactcard from "./assets/contact-card.png";
+import outliers from "./assets/books/outliers.png";
+import CHM from "./assets/books/cant-hurt-me.png";
+import Lombardi from "./assets/books/lombardi.png";
+import chaos from "./assets/books/chaos.png";
+import bornACrime from "./assets/books/born-a-crime.png";
+import marsvenus from "./assets/books/men-mars.png";
+import atomichabit from "./assets/books/atomic-habit.png";
+import sevenhabits from "./assets/books/sevenhabits.png";
+import eighthabits from "./assets/books/8th-habit.png";
+import failingFoward from "./assets/books/failing-forward.png";
+import Scarlett from "./assets/books/scarlett.png";
+import singleOnPurpose from "./assets/books/sop.png";
+import rl from "./assets/books/redeeming-love.png";
+import ymoyl from "./assets/books/your-money-or-your-life.png";
+import tsom from "./assets/books/psychology-of-money.png";
+import StoryWorthy from "./assets/books/storyworthy.png";
+import lostandfound from "./assets/books/lostandfound.png";
+import nightflight from "./assets/books/night-flight-to-paris.png";
+import Yellowface from "./assets/books/yellowface.png";
+import Deepwork from "./assets/books/deepwork.png";
+import sogood from "./assets/books/sogood.png";
+import mastery from "./assets/books/mastery.png";
+import laws from "./assets/books/the-laws-of-human-nature.png";
+import Divergent from "./assets/books/divergent.png";
+import hungergames from "./assets/books/hunger-games.png";
+import layla from "./assets/books/layla.png";
+import hntda from "./assets/books/logan-ury.png";
+import richdadpoordad from "./assets/books/rich-dad-poor-dad.png";
+import sapiens from "./assets/books/sapiens.png";
+import thinkingfastslow from "./assets/books/thinking-fast-slow.png";
+import seduction from "./assets/books/the-art-of-seduction.png";
+import richestbabylon from "./assets/books/the-richest-man-in-babylon.png";
+import smartmoneywoman from "./assets/books/smart-money-woman.png";
+import positivethinking from "./assets/books/postitive-thinking.png";
+import definingdecade from "./assets/books/the-defining-decade.png";
+import thinkandgrowrich from "./assets/books/think-and-grow-rich.png";
+import stealikeanartist from "./assets/books/steal-like-an-artist.png";
+import actlikealady from "./assets/books/act-like-a-lady.png";
+import howtowinfriends from "./assets/books/how-to-win-friends.png";
+import secretstomilli from "./assets/books/secrets-to-milli.png";
+
 export const UtilsProjects = [
     {
         title: 'Distraction Blocker - Chrome extension',
@@ -72,208 +113,328 @@ export const UtilsProjects = [
 export const books = {
     "2025": [
       {
+        img: outliers,
         title: "Outliers",
         author: "Malcolm Gladwell",
         rating: 5,
-img: "",
 link:""        
       },
       {
+        img: CHM,
         title: "Can't hurt me",
         author: "David Goggins",
-        rating: 5,
-img: "",
+        rating: 4,
 link:""        
       },
       {
         title: "The Lombardi rules",
         author: "Vincent Lombardi",
-        rating: 5,
-img: "",
+        rating: 3,
+img: Lombardi,
 link:""        
       },
       {
         title: "CHAOS- Charles Manson, the CIA, and the secret history of the sixties ",
         author: "Tom O'Neill",
         rating: 5,
-img: "",
+        img: chaos,
 link:""        
       },
       {
         title: "Born a crime ",
         author: "Trevor Noah",
-        rating: 5,
-img: "",
+        rating: 4,
+        img: bornACrime,
 link:""        
       },
       {
         title: "Men are from mars, women are from venus",
         author: "John Gray",
         genre: "Non-fiction",
-        rating: 2,
-img: "",
+        rating: 3,
+        img: marsvenus,
 link:""        
       },
       {
         title: "Atomic habit",
         author: "James clear",
-        rating: 5,
-img: "",
+        rating: 4,
+img: atomichabit,
 link:""        
       },
     ],
     "2024": [
       {
+       img: sevenhabits,
         title: "The 7 habit of highly effective people",
         author: "Stephen R.Covey",
         rating: 5,
-img: "",
+
 link:""        
       },
       {
         title: "The 8th habit",
         author: "Stephen R.Covey",
-        rating: 5,
-img: "",
+        rating: 4,
+        img: eighthabits,
 link:""        
       },
       {
         title: "Failing forward",
         author: "John C. Maxwell",
-        rating: 5,
-img: "",
+        rating: 4,
+        img: failingFoward,
 link:""        
       },
       {
         title: "The Scarlett Thread ",
         author: "Francine Rivers",
         rating: 5,
-img: "",
+        img: Scarlett,
 link:""        
       },
       {
         title: "Single On Purpose ",
         author: "John Kim",
-        rating: 5,
-img: "",
+        rating: 4,
+        img: singleOnPurpose,
 link:""        
       },
       {
         title: "Redeeming Love",
         author: "Francine Rivers",
-        rating: 2,
-img: "",
-link:""        
-      },
-      {
-        title: "Le Petit Prince",
-        author: "",
-        rating: 2,
-img: "",
+        rating: 4,
+        img: rl,
 link:""        
       },
       {
         title: "Your Money or Your Life",
         author: "Vicki Robin",
         rating: 5,
-img: "",
+        img: ymoyl,
 link:""        
       },
       {
         title: "StoryWorthy",
         author: "Matthew Dicks",
         rating: 5,
-img: "",
+        img: StoryWorthy,
 link:""        
       },
       {
         title: "Lost and found",
         author: "Sarah Jakes Robert",
         rating: 5,
-img: "",
+        img: lostandfound,
 link:""        
       },
       {
         title: "Night flight to Paris",
         author: "Cara Black",
-        rating: 5,
+        rating: 3,
         genre: "Fiction",
-img: "",
+        img: nightflight,
 link:""        
       },
-      {
-        title: "Three hours in Paris",
-        author: "Cara Black",
-        rating: 5,
-        genre: "Fiction",
-img: "",
-link:""        
-      },
+      
       {
         title: "Yellowface",
         author: "R.F Kuang",
         rating: 5,
         genre: "Fiction",
-img: "",
+        img: Yellowface,
 link:""        
       },
     ],
     "All Time": [
       {
         title: "Deep work",
-        rating: "Cal Newport",
+        author: "Cal Newport",
         rating: 5,
-        img: "",
+        img: Deepwork,
         link:""   
       },
       {
         title: "So good they can't ignore you",
-        rating: "Cal Newport",
+        author: "Cal Newport",
         rating: 5,
-        img: "",
+        img: sogood,
         link:""   
       },
       {
         title: "Mastery",
-        rating: "",
+        author: "Robert Greene",
         rating: 5,
-        img: "",
+        img: mastery,
         link:""   
       },
       {
-        title: "Mastery",
-        rating: "",
-        rating: 5,
-        img: "",
+        title: "The laws of human nature",
+        author: "Robert Greene",
+        rating: 3,
+        img: laws,
         link:""   
       },
       {
         title: "Divergent Trilogy",
         author: "Veronica Roth",
+        rating: 4,
+        img: Divergent,
+        link:"",
+        notes: "I read it right after hunger games when I was craving something similar to immerse in. The ending stil gets me upset. \n Re-read it recently and honestly the dialogue were not so great but the first time I read it still leaves me with a pleasant nostalgia, hence the rating."
+      },
+      {
+        title: "Hunger games series",
+        author: "Suzanne Collins",
         rating: 5,
-        img: "",
-        link:""   
+        img: hungergames,
+        link:"",
+        genre: ["fantasy"],
+        notes: "Holds the title of the the best fantasy series I ever read. The irony of it's end, huh! \n Also, Katniss was meant to be annoying, she was 16!"
       },
       {
         title: "Layla",
         author: "Colleen Hoover",
         rating: 5,
-        img: "",
-        link:""   
-      },
-      {
-        title: "Hunger games trilogy",
-        author: "",
-        rating: 5,
-        img: "",
-        link:""   
+        genre: ["paranormal", "romance", "thriller"],
+        img: layla,
+        link:"", 
+        notes: "The best and only paranormal novel I have recollections reading. Even though it's been a minute, I can still recollect every single thing, it's the kind of book that stays with you. Like 'Behind her eyes'. \n Also the first time I heard of Colleen Hoover, I got excited about her and checked out her other books, unfortunately 'It ends with us' opening chapters cringe dialogue - they were really bad - left such a bad tast in my mouth. \n Warning, there are some graphic content." 
       },
       {
         title: "How not to die alone",
-        author: "",
+        author: "Logan Ury",
+        rating: 4,
+        img: hntda,
+        link:"" ,
+        genre: ["self help"],
+        note: "Books on singleness are typically cringe, not this one. It was surprisingly good."  
+      },
+      {
+        title: "The Psychology of money",
+        author: "Morgan Housel",
+        rating: 4,
+        img: tsom,
+        link:""   ,
+        genre: ["self help", "personal finance"],
+        note: "One of the best financial books I read, really goes down to the root. I have a list of about 5 financial boooks I like to repeat every year for reinforced knowledge, it is one."
+      },
+      {
+        title: "Rich dad, poor dad",
+        author: "Robert T. Kiyosaki",
+        rating: 4,
+        img: richdadpoordad,
+        link:""   ,
+        genre: ["self help", "personal finance"],
+        note: "Is there any one who hasn't read this book? The book that taught me about passive income. My very first induction to financial knowledge."
+      },
+      {
+        title: "Sapiens - A brief history of humankind",
+        author: "Yuval Noah Harris",
+        rating: 3,
+        img: sapiens,
+        link:""   ,
+        genre: ["history", "social philosophy"],
+        note: "I enjoy well written contrarian thoughts and beliefs to mine."
+      },
+      {
+        title: "Thinking fast and slow",
+        author: "Daniel Kahneman",
+        rating: 4,
+        img: thinkingfastslow,
+        link:""   ,
+        genre: ["non-fiction"],
+        note: "This book introduced me to a more conscious and intentional way of thought and living. I should read it again soon so it shows up quicker for others to see."
+      },
+      {
+        title: "The art of seduction",
+        author: "Robert Greene",
+        rating: 1,
+        img: seduction,
+        link:""   ,
+        genre: ["non-fiction"],
+        note: "The only reason this books exists here is so someone would see my comment and not read it. \n You know that phase where you read a book so good, you fall in love with the author and try to religiously consume all their work. Yep, exact same scenario. \n I read and loved mastery and the laws of human nature, and decided to continue the Robert Greene work. This was the book where I stopped. \n Of course I'll be happy to hear a good argument for the premise of the book, if I was wrong in my judgement."
+      },
+      {
+        title: "The richest man in babylon",
+        author: "George S. Clason",
         rating: 5,
-        img: "",
-        link:""   
+        img: richestbabylon,
+        link:""   ,
+        genre: ["personal finance", "self-help"],
+        note: "One of the best finance books of all time. Short, practical and life-changing. I love this book."
+      },
+      {
+        title: "Smart money woman",
+        author: "Arese Ugwu",
+        rating: 4,
+        img: smartmoneywoman,
+        link:""   ,
+        genre: ["personal finance", "self-help", "fiction"],
+        note: "A relatable book on financial knowledge for Nigerian women but applicable to every concept. Because it was written in storytelling fiction style, the lessons leave an even lasting impact. I rate it highly."
+      },
+      {
+        title: "The power of positive thinking",
+        author: "Norman Vincent Peale",
+        rating: 4,
+        img: positivethinking,
+        link:""   ,
+        genre: ["self-help"],
+        note: "One of the books that eased my skeptic self into positive thinking and the power of the mind. It certainly helped that he was a christain and could back up his thesis by scripture. It is an old book so many things get repeated a lot, but its good read."
+      },
+      {
+        title: "The defining decade",
+        author: "Meg Jay",
+        rating: 5,
+        img: definingdecade,
+        link:""   ,
+        genre: ["self-help"],
+        note: "I think it's a pretty bold book or maybe it was published in a time where people weren't just as easily upset. \n The biggest takeaway for me was how the 20s can set the foundational tone of our lives, it is the year where we pick a major, career path, form the most connections, most get married, and this is not to say all these and more must happen in your 20s but it's a foundational decade for most. \n As such, we should take advantage of it. Isn't that sound advice?"
+      },
+      {
+        title: "Think and grow rich",
+        author: "Napeoleon Hill",
+        rating: 5,
+        img: thinkandgrowrich,
+        link:""   ,
+        genre: ["self help", "pesonal finance"],
+        note: "We've all read this book right and we can all agree that it will change your life."
+      },
+      {
+        title: "Steal like an artist",
+        author: "Austin Kleon",
+        rating: 3,
+        img: stealikeanartist,
+        link:""   ,
+        genre: ["self help"],
+        note: "The illustrations in this book has stayed with me, and I know it's about being a creative but I should read it again soon."
+      },
+      {
+        title: "Act like a lady, think like a man",
+        author: "Steve Harvey",
+        rating: 2,
+        img: actlikealady,
+        link:""   ,
+        genre: ["self help", "relationships"],
+        note: "Yeah, similar to the 'why men love bitches trope' - excuse the language but that is an actual book title. Anyways, it is hard to get a self-help book on love and intimacy right, and they did not get it right."
+      },
+      {
+        title: "How to win friends and influence people",
+        author: "Dale Carnegie",
+        rating: 4,
+        img: howtowinfriends,
+        link:""   ,
+        genre: ["self help", "relationships"],
+        note: "I think this boook is a rite of passage when reading non-fiction so you've probaly read it."
+      },
+      {
+        title: "Secrets to a millionaire mindset",
+        author: "T. Harv Eker",
+        rating: 5,
+        img: secretstomilli,
+        link:""   ,
+        genre: ["self help", "personal finance"],
+        note: "Oh how I love a practical finance book. This is different from every other finance books you've read, it explains why you have all these knowledge and yet no motion."
       },
     ]
   };

@@ -30,17 +30,17 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
         {Object.entries(postsByMonth).map(([month, posts]) => (
           <section>
             <h2 class="blog-month">{month}</h2>
-            <ul class="blog-item">
+            <div class="blog-item">
               {posts.map((post) => (
-                <li><a href={`/post/${post.slug}`}>
+                <article><a href={`/post/${post.slug}`}>
                 <div>
                   <h3>   {post.frontmatter.title}</h3>
                   <p> {post.frontmatter.description}</p>
                   <button class="read-more"> read more<Icon name="mdi:arrow-right"/> </button>
                 </div>
-                </a></li>
+                </a></article>
               ))}
-            </ul>
+            </div>
           </section>
         ))}
   </div>
