@@ -39,9 +39,9 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
                 <article><a href={`/post/${post.slug}`}>
                 <div>
                   <h3>   {post.frontmatter.title}</h3>
-                  <p> {post.frontmatter.description}
+                  <p class=""> {post.frontmatter.description}
 
-                  <span class="read-more"> continue reading...<Icon name="mdi:arrow-right"/> </span>
+                  <span class="read-more"> continue reading... </span>
                   </p>
                 </div>
                 </a></article>
@@ -63,9 +63,22 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
     .blog-month{
      font-size: 16px;
      text-decoration: underline;
+     
     }
 
     .blog-item article a {
       text-decoration: none;
     }
+
+    .blog-item article div h3{
+      margin: 0;
+    }
+    .blog-item article div p{
+      margin: 0;
+    }
+    .blog-item article div span{
+      margin: 0;
+    }
+
+   
 </style>
