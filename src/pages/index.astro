@@ -4,6 +4,7 @@ import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Featured from "../components/Featured.astro";
 import { Icon } from "astro-icon/components";
+import Connections from "../components/Connections.astro";
 const pageTitle = "Blossom - Home";
 ---
 
@@ -29,15 +30,7 @@ const pageTitle = "Blossom - Home";
    </p>
     </section>
 
-    <div class="index-link">
-      <p>Connect with me on <a href="https://www.linkedin.com/in/blossom-babalola/">linkedin  <Icon name="mdi:arrow-top-right"/></a></p>
-      <p><a href="https://github.com/blossom-babs">
-      
-         github 
-          <Icon name="mdi:arrow-top-right"/>
-    </a></p>
-     
-    </div>
+  <Connections/>
 
 	<section class="featured">
 		<h2>Featured Articles</h2>
