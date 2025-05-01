@@ -42,6 +42,7 @@ import stealikeanartist from "./assets/books/steal-like-an-artist.png";
 import actlikealady from "./assets/books/act-like-a-lady.png";
 import howtowinfriends from "./assets/books/how-to-win-friends.png";
 import secretstomilli from "./assets/books/secrets-to-milli.png";
+import wordcount from "./assets/books/wordcount.png";
 
 export const UtilsProjects = [
     {
@@ -110,6 +111,8 @@ export const UtilsProjects = [
     },
 ]
 
+// franceine rivers women of faith
+// lions heart
 export const books = {
     "2025": [
       {
@@ -117,50 +120,63 @@ export const books = {
         title: "Outliers",
         author: "Malcolm Gladwell",
         rating: 5,
-link:""        
+link:"",
+genre: ["self-help", "mindset"],
+note: "I'm honestly glad this book is over because it messed with my sleep schedule for the one plus week I read it. I was supposed to read atleast a chapter before I slept but would almost always never stop till it was almost midnight, my alarm would go off by 5am and I would promise myself I'd do better that night. But once I started the read for the night, it was difficult to put down. \n\n My physics teacher in ss2 sent this book to me. I found it in my old email and I wish I hadn't missed that mail 10 years ago. ",        
       },
       {
         img: CHM,
         title: "Can't hurt me",
         author: "David Goggins",
         rating: 4,
-link:""        
+link:""   ,
+genre: ["self help", "mindset"],
+note: "This is one self help book that will actually help you. I always finish each chapter looking feeling like I could do anything and I did do many things I thought were impossible in my pilates class. \n\n If you read one book this year, read this one. \n\n **Warning** Lots of swear words alert."     
       },
       {
         title: "The Lombardi rules",
         author: "Vincent Lombardi",
         rating: 3,
 img: Lombardi,
-link:""        
+link:""   ,
+genre: ["self help", "mindset"],
+note: "The cliche of self-help books. Bit-sized chapters so makes for an easy read"
       },
       {
         title: "CHAOS- Charles Manson, the CIA, and the secret history of the sixties ",
         author: "Tom O'Neill",
         rating: 5,
         img: chaos,
-link:""        
+link:""  ,
+genre: ["investigative journalism", "conspiracy theory"],
+note: "This book was a recommendation from Candace Owens bookclub. Each chapter left me more astounded than the last. Each time I thought I'd seen the worst, I read even worse. \n\n The human race is a peculiar creation. Props to Tom for dedicating 20 years of his life to this research. You truly represent the best of us."      
       },
       {
         title: "Born a crime ",
         author: "Trevor Noah",
         rating: 4,
         img: bornACrime,
-link:""        
+link:""  ,
+genre: ["autobiography", "memoir", "comedy"],
+note: "One of the most interesting autobiography ever - took me on an emotional rollercoaster and ended as such. I guess because he still lives, his story continues. In one chapter, I was laughing and crying, what a well written book!"            
       },
       {
         title: "Men are from mars, women are from venus",
         author: "John Gray",
-        genre: "Non-fiction",
+        genre: ["Non-fiction"],
         rating: 3,
         img: marsvenus,
-link:""        
+link:""   ,
+note: "Not to be that person but I personally do not hold self-help books on relationships in high regard, I've found it is so hard to get right (atleast to my taste so I typically stir away from them). This was a group read and I did not enjoy it at all. \n\n Guys, I think the problem is me. I just do not enjoy self-help books on relationships AT ALL."     
       },
       {
         title: "Atomic habit",
         author: "James clear",
         rating: 4,
 img: atomichabit,
-link:""        
+link:""  ,
+genre: ["self help"]  ,
+note: 'Atomic habit is a yearly book for me. A practical book for setting systems and structures.',    
       },
     ],
     "2024": [
@@ -169,64 +185,82 @@ link:""
         title: "The 7 habit of highly effective people",
         author: "Stephen R.Covey",
         rating: 5,
-
+genre: ["self help"],
+note: "Because I read so many self help, non-fiction, I've to some large extent being able to tell the real stuff from the main fluff, as many books are just a retelling of some idea. This is not to say that ideas have to be original but it does help if they're retold better and distinctly. In whichever case, this is a distinct book with a voice of its own. I loved and recommend it.",
 link:""        
       },
       {
-        title: "The 8th habit",
-        author: "Stephen R.Covey",
-        rating: 4,
-        img: eighthabits,
+       img: wordcount,
+        title: "Ikigai",
+        author: "Hector Garcia, Francesc Miralles",
+        rating: 3,
+genre: ["self help"],
+note: "More than anything, I enjoyed the perspective the case study of the Japanese people whose lives inspired this book. Gets a bit boring in the last 2 chapters like they had to stuff things to meet a word count",
 link:""        
       },
+     
       {
         title: "Failing forward",
         author: "John C. Maxwell",
         rating: 4,
         img: failingFoward,
-link:""        
+link:"" ,
+genre: ["self help", "leadership"],
+note: "This was one of the first materials I consumed that started to reframe my mind about failure and get those reps in."       
       },
       {
         title: "The Scarlett Thread ",
         author: "Francine Rivers",
         rating: 5,
         img: Scarlett,
-link:""        
+        genre: ["faith", "romance"],
+link:""        ,
+note: "Francine Rivers is simply one of the best writers to ever exist. There are books that stay with you long after you've read them, Francine Rivers is the only author whose every book has stayed with me. \n\n This is one of those books where the author sifts from past to present, if you've read enough book, you know how eaily this can go awry but she made it work. What a woman! What brilliance."
       },
       {
         title: "Single On Purpose ",
         author: "John Kim",
-        rating: 4,
+        rating: 3,
         img: singleOnPurpose,
-link:""        
+link:"" ,
+genre: ["self help", "relationship"]   ,
+note: "Not bad. My sentiment on self help books on relationships still stands but this was atleast enjoyable."    
       },
       {
         title: "Redeeming Love",
         author: "Francine Rivers",
         rating: 4,
         img: rl,
-link:""        
+link:""    ,
+genre: ["faith", "healing"],
+note: "This story is a modern retelling of the book of Micah, the prophet in the bible. You already know how I feel about Francine Rivers, one of the few people whose every book is a hit with me. A great book."    
       },
       {
         title: "Your Money or Your Life",
         author: "Vicki Robin",
         rating: 5,
         img: ymoyl,
-link:""        
+link:"",
+genre: ["self help", "personal finance"],
+note: "A great book that puts into perspective the cost of exchanging time for money and how to retire early, and gain financial freedom quickly."    
       },
       {
         title: "StoryWorthy",
         author: "Matthew Dicks",
         rating: 5,
         img: StoryWorthy,
-link:""        
+link:""    ,
+genre: ["non-fiction"],
+note: "This is a book that teaches you how to tell better stories through stories. A masterpiece. One of the books that stays with you looong after you've read it."    
       },
       {
         title: "Lost and found",
         author: "Sarah Jakes Robert",
         rating: 5,
         img: lostandfound,
-link:""        
+link:"" ,
+genre: ["autobiography", "faith", "restoration"],
+note: "I've probably read this book a couple of times and it still manages me to touch in many ways. I can't recommend this book enough to anyone who's had a difficult past. You're not beyond healing." 
       },
       {
         title: "Night flight to Paris",
@@ -234,16 +268,19 @@ link:""
         rating: 3,
         genre: "Fiction",
         img: nightflight,
-link:""        
+link:""  ,
+genre: ["autobiography", "faith", "restoration"],
+note: "A recommendation by apple book. A sequel to another book which I didn't read but still pretty followable. For its genre, action, it was good read."
       },
       
       {
         title: "Yellowface",
         author: "R.F Kuang",
         rating: 5,
-        genre: "Fiction",
+        genre: ["Fiction"],
         img: Yellowface,
-link:""        
+link:"" ,
+note: "One of my top 5 favorite fiction. Unpredictable, new and wild. It's one of those few books where the protagonist is also a villain, but the character arch is so well written you're both rooting for her and waiting to see her fail. Also like, was she really a villain?"      
       },
     ],
     "All Time": [
@@ -252,28 +289,36 @@ link:""
         author: "Cal Newport",
         rating: 5,
         img: Deepwork,
-        link:""   
+        link:""  , 
+        genre: ["non-fiction"],
+        note: "This book redefined hard work for me. I go back to it every once in a while when I feel like I'm lagging in my vision and it snaps me right back."
       },
       {
         title: "So good they can't ignore you",
         author: "Cal Newport",
         rating: 5,
         img: sogood,
-        link:""   
+        link:"" ,
+        genre: ["non-fiction"],
+        note: "I credited Deep work as the book that helped me embrace the HARD work life, but I read this before Deep work and I think this set me on that path, Deep work just showed me how to maximize result by doubling down on my focus. \n\n Every ambitious people should read this if they haven't already." 
       },
       {
         title: "Mastery",
         author: "Robert Greene",
         rating: 5,
         img: mastery,
-        link:""   
+        link:""  ,
+        genre: ["non-fiction"],
+        note:"If you've not read this book, I recommend it. It's one of Robert's best works."
       },
       {
         title: "The laws of human nature",
         author: "Robert Greene",
         rating: 3,
         img: laws,
-        link:""   
+        link:""   ,
+        genre: ["non-fiction"],
+        note:"Most of Robert's read shows deep research and intentionality, since we all deal and will forever interact with others, it's helpful to learn a bit more about why/how we tick."
       },
       {
         title: "Divergent Trilogy",

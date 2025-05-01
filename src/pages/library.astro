@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import ArchiveLayout from "../layouts/ArchiveLayout.astro";
 import { books } from "../utils";
+import Modal from "../components/Modal.astro";
 
 // Ensure books is structured correctly
 // Example structure: { "2023": [{ title: "Book 1" }, { title: "Book 2" }] }
@@ -18,7 +19,6 @@ import { books } from "../utils";
           <h1>{year}</h1>
           <div class="library-grid">
             {booklist.map((entry) => {
-        
               return (
                 <div class="book-entry">
                   <img src={entry.img.src} alt={entry.title} />
@@ -32,14 +32,20 @@ import { books } from "../utils";
                         )
                       )}
                     </div>
+                    <button data-entry={JSON.stringify(entry)} class="notes-icon">
+                    <Icon name="mdi:note-edit-outline" />
+                    </button>
                   </div>
                 </div>
-              );
+);
             })}
+<Modal/>
+
           </div>
         </article>
       ))
     }
+   
   </section>
 </ArchiveLayout>
 
@@ -69,6 +75,7 @@ import { books } from "../utils";
     justify-content: center;
     padding: 1rem 0;
     text-align: center;
+   
   }
   .book-entry_details p {
     margin: 0;
@@ -78,5 +85,17 @@ import { books } from "../utils";
   }
   .book-entry_details p:nth-child(2) {
     padding: 0.5rem 0;
+  }
+
+  .book-entry{
+    position: relative;
+  }
+  .notes-icon{
+    position: absolute;
+    right: .5rem;
+    bottom: 0;
+    cursor: pointer;
+    border: none;
+  background-color: transparent;
   }
 </style>
