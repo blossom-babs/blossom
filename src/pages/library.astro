@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import ArchiveLayout from "../layouts/ArchiveLayout.astro";
 import { books } from "../utils";
 import Modal from "../components/Modal.astro";
+import Drawer from "../components/Drawer.astro";
 
 // Ensure books is structured correctly
 // Example structure: { "2023": [{ title: "Book 1" }, { title: "Book 2" }] }
@@ -47,11 +48,15 @@ import Modal from "../components/Modal.astro";
     }
    
   </section>
+  <div class="drawer-wrapper">
+    <Drawer/>
+  </div>
 </ArchiveLayout>
 
 <style>
   .library {
     color: #282a36;
+    position: relative;
   }
   .rating {
     display: flex;
@@ -98,4 +103,6 @@ import Modal from "../components/Modal.astro";
     border: none;
   background-color: transparent;
   }
+
+  
 </style>

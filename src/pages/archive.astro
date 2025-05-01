@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { Icon } from "astro-icon/components";
 import ArchiveLayout from '../layouts/ArchiveLayout.astro';
 import {UtilsArchive} from '../utils'
+import Drawer from '../components/Drawer.astro';
 ---
 
 <ArchiveLayout>
@@ -27,9 +28,13 @@ import {UtilsArchive} from '../utils'
        
         </div>
     </div>
+    <Drawer/>
 </ArchiveLayout>
 
 <style>
+    .about-heading{
+         font-family: "Dancing Script", cursive;
+    }
     .cont{
         margin-top: 1rem;
     }

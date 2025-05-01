@@ -10,6 +10,7 @@ import Office from '../assets/office.gif'
 import Outing from '../assets/outingwithtreaz.jpeg'
 import Youversion from '../assets/youversion.png'
 import ztm from '../assets/ztm.png'
+import Drawer from "../components/Drawer.astro";
 
 const pageTitle = "Blossom - About";
 
@@ -162,16 +163,9 @@ const career = [
     </ul>
   </section>
     
-  <aside class="about-sidenav">
-    <ul>
-      <li>- - -</li>
-      <li><a href="/archive">Archives</a></li>
-      <li><a href="/library">Library</a></li>
-      <li><a href="/others">Others.</a></li>
-   
-    </ul>
-  
-  </aside>
+  <div class="drawer-wrapper">
+    <Drawer/>
+  </div>
 </div>
 </Layout>
 
@@ -216,25 +210,6 @@ const career = [
   align-items: start;
   position: relative;
 }
-
-.about-sidenav{
-   margin-top: 5rem;
-  }
-
-  .about-sidenav ul{
-   /* list-style-type: none; */
-   display: grid;
-   gap: .4rem;
-  }
-  .about-sidenav ul li a, .about-sidenav ul li {
-   text-decoration: none;
-   color: #A37643;
-   font-weight: 500;
-   font-size: 14px;
-  }
-  .about-sidenav ul li a:hover {
-   opacity: 0.7;
-  }
 
   .me-img{
     width:100%;
@@ -285,15 +260,6 @@ const career = [
     filter: grayscale(0%);
   }
 
-  /* .career-context ul{
-    margin: .5rem;
-    padding: .5rem;
-  } */
-
- /* summary::marker{
-  
- color: hsl(0, 0%, 40%);
- } */
 
  details{
 }
@@ -341,7 +307,7 @@ details[open]::details-content{
     width:90%;
   }
 
-  .about-sidenav{
+  .drawer-wrapper{
     position: absolute;
     right: -7rem;
     bottom:0;
@@ -349,6 +315,8 @@ details[open]::details-content{
 
  
 
+
 }
+
 
 </style>
