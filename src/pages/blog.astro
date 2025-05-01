@@ -27,7 +27,11 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
 <Layout>
 
   <div class="blog">
-        {Object.entries(postsByMonth).map(([month, posts]) => (
+        {Object.entries(postsByMonth).sort(([monthA], [monthB]) => {
+          const order = ["May 2025", "April 2025", "June 2022"]
+          return order.indexOf(monthA) - order.indexOf(monthB);
+          
+        }).map(([month, posts]) => (
           <section>
             <h2 class="blog-month">{month}</h2>
             <div class="blog-item">
@@ -35,8 +39,10 @@ const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
                 <article><a href={`/post/${post.slug}`}>
                 <div>
                   <h3>   {post.frontmatter.title}</h3>
-                  <p> {post.frontmatter.description}</p>
-                  <button class="read-more"> read more<Icon name="mdi:arrow-right"/> </button>
+                  <p> {post.frontmatter.description}
+
+                  <span class="read-more"> continue reading...<Icon name="mdi:arrow-right"/> </span>
+                  </p>
                 </div>
                 </a></article>
               ))}
