@@ -1,7 +1,7 @@
 ---
-title: 'before you write another useEffect hook'
+title: 'Before you write another useEffect hook'
 featured: true
-main: true
+main: false
 pubDate: 2025-04-13
 pubMonth: April
 description: 'Before you use another useEffect hook'

@@ -1,5 +1,5 @@
 ---
-title: 'clean up the leaks in your web app'
+title: 'Clean up the leaks in your web app'
 featured: true
 main: false 
 pubDate: 2025-04-13,

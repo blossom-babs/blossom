@@ -2,7 +2,7 @@
 title: 'Optimizing Web Applications for scale'
 featured: true
 main: true 
-pubDate: 2025-04-30,
+pubDate: 2025-05-01,
 pubMonth: April
 description: "Scalability has become a frontend buzzword, but what does it really take to scale a web app used by thousands of users? Spoiler: it often comes down to the basics you already know. From modular components to testing, performance, and documentation—if you're building at a startup or scaling fast, these are the habits that keep your frontend stable. And these are habites we often ignore…."
 image:
