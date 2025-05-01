@@ -14,47 +14,50 @@ const featuredPost = allPosts.filter(
 );
 
 const otherPosts = allPosts.filter(
-  (post: any) => post.frontmatter.featured 
+  (post: any) => post.frontmatter.featured && !post.frontmatter.main
 );
 ---
 
+  <div class="featured-main">
+    <div class="featured-blog">
+      <article>
 
-  <article class="featured-main">
-    <!-- {
-      featuredPost.map((post: any) => (
-        <a href={`/post/${post.slug}`}>
-          <img
-            src={post.frontmatter.image.url}
-            alt={post.frontmatter.alt}
-            srcset=""
-          />
-          <p>
-            {post.frontmatter.title} <Icon name="mdi:arrow-top-right" />{" "}
-          </p>
-        </a>
-      ))
-    } -->
-
-    <ul class="featured-blog">
+      {
+        featuredPost.map((post: any) => (
+            <a href={`/post/${post.slug}`}>
+                <div>
+                  <h3> {post.frontmatter.title}</h3>
+                  <p> {post.frontmatter.description}</p>
+                  <button class="read-more">
+                    {" "}
+                    Continue reading
+                    <Icon name="mdi:arrow-right" />{" "}
+                  </button>
+                </div>
+              </a>
+      
+        ))
+      }
+      </article>
       {
         otherPosts.map((post: any) => (
-          <li>
+          <article>
             <a href={`/post/${post.slug}`}>
               <div>
                 <h3> {post.frontmatter.title}</h3>
                 <p> {post.frontmatter.description}</p>
                 <button class="read-more">
                   {" "}
-                  read more
+                  Continue reading
                   <Icon name="mdi:arrow-right" />{" "}
                 </button>
               </div>
             </a>
-          </li>
+          </article>
         ))
       }
-    </ul>
-  </article>
+    </div>
+  </div>
 
 
 <style>
@@ -66,28 +69,36 @@ const otherPosts = allPosts.filter(
     margin: 0;
     padding: 0;
   }
-  .featured-blog h3,  .featured-blog p{
-
-    margin: 0;
-    padding: 0;
-  }
+  /* .featured-blog article h3, .featured-blog article p {
+margin:0;
+padding:0;
+  
+  } */
   .featured-blog a{
     color: #2b2b2b;
    text-decoration: none;
   }
-  .featured-blog h3{
-   /* font-weight: 500; */
-   padding-bottom: .1rem;
-  }
+
   .featured-blog p{
-   /* font-size: 14px;
-   line-height: 20px; */
+
    font-weight: 400;
+   font-size: 14px;
   }
 
-  .featured-blog li{
-    background-color: #FAFAFA !important;
+  .featured-blog article{
+    background-color: #FAFAFA;
+    color: #333333;
+    border: .5px solid #d1cfc6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 1rem 1rem;
+    border-radius: 8px;
   }
 
+  @media screen and (max-width:450px) {
+    .featured-blog article p{
+      height: 110px;
+overflow: hidden;
+    }
+  }
  
 </style>
