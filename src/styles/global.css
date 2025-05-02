@@ -12,6 +12,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav ul {
@@ -25,6 +29,13 @@ nav ul {
   margin: 1rem auto 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+
+}
+
+.layout-main{
+  display: flex;
+  flex-grow: 1;
   flex-direction: column;
 }
 
@@ -61,6 +72,8 @@ footer {
   font-size: 14px;
 
   padding-top: 140px;
+
+  margin-top: auto;
 }
 
 footer p {
@@ -266,3 +279,23 @@ code {
  
 
 } */
+
+.about-heading{
+  font-family: "Dancing Script", cursive;
+  /* font-family: "Geist Mono", monospace; */
+}
+
+blockquote {
+  background-color: #f5f5f5;
+  border-left: 4px solid #a37643;
+  padding: .5rem;
+  margin:  0;
+  font-style: italic;
+  color: #444;
+  line-height: 1.6;
+  border-radius: 8px;
+}
+
+blockquote p {
+  margin: 0;
+}

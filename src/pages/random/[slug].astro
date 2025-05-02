@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { Icon } from "astro-icon/components";
+
+//const {slug} = Astro.params
+
+export async function getStaticPaths() {
+  const postModules = import.meta.glob("../unofficial/*.md", { eager: true });
+
+  return Object.entries(postModules).map(([path, post]) => {
+    const slug = path.replace("../unofficial/", "").replace(".md", "");
+
+    return {
+      params: { slug },
+      props: {
+        post: {
+          ...(post as any),
+          slug,
+        },
+      },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { frontmatter, default: Content } = post;
+
+function formatDate(date: any) {
+  const parsedDate = new Date(date);
+  const formatted = parsedDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  return formatted;
+}
+---
+
+<Layout>
+  <button onclick="history.back()"> <Icon name="mdi:arrow-left" /> Back</button>
+  <article class="post-content">
+    <h1 class="title">{frontmatter.title}</h1>
+    <!-- <p class="desc">{frontmatter.description}</p> -->
+    <p class="date">{formatDate(frontmatter.pubDate)}</p>
+
+    <Content />
+  </article>
+</Layout>
+
+<style>
+  article {
+    color: #2b2b2b;
+    font-size: 14px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .desc {
+    font-style: italic;
+  }
+
+  .desc,
+  .date,
+  .title {
+    padding: 0;
+    margin: 0;
+  }
+
+  .title {
+    padding-top: 2rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  .desc {
+    padding: 0.5rem 0;
+    width: 80%;
+  }
+
+</style>

@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const allPosts = Object.entries(
+  import.meta.glob("../pages/unofficial/*.md", { eager: true })
+).map(([path, post]) => {
+  const slug = path.replace("./unofficial/", "").replace(".md", "");
+  return {
+    ...(post as any),
+    slug,
+  };
+});
+
+// Group by Month-Year
+const postsByMonth = allPosts.reduce((acc: Record<string, any[]>, post) => {
+  const pubDate = new Date(post.frontmatter.pubDate);
+  const monthYear = pubDate.toLocaleString("default", {
+    month: "long",
+    year: "numeric",
+  }); // "March 2025"
+
+  if (!acc[monthYear]) acc[monthYear] = [];
+  acc[monthYear].push(post);
+
+  return acc;
+}, {});
+---
+
+<Layout>
+  <div class="blog">
+    <h2 class="about-heading">Unhinged musings</h2>
+    <p class="random-exp">
+      Browse at your own risk. Arguments welcome. Enlightenment not guaranteed.
+    </p>
+    {
+      Object.entries(postsByMonth)
+        .sort(([monthA], [monthB]) => {
+          const order = ["May 2025", "April 2025", "March 2025", "June 2022"];
+          return order.indexOf(monthA) - order.indexOf(monthB);
+        })
+        .map(([month, posts]) => (
+          <section>
+            <h3 class="blog-month">{month}</h3>
+            <ul class="blog-list">
+              {posts.map((post) => (
+                <li>
+                  <a href={`/random/${post.slug}`}>
+                    <p> {post.frontmatter.title}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .blog {
+    color: #2b2b2b;
+  }
+
+  .random-exp{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .blog-month {
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  /* .blog-item article a {
+      text-decoration: none;
+    } */
+
+  .blog-list li {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  /* .blog-list li a{
+  
+  } */
+</style>

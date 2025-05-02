@@ -1,12 +1,16 @@
-#relocation-chronicles
+---
+title: 'Canada living 103'
+description: 'On garbage trucks, clean streets, and quiet wonder.'
+pubDate: 2025-04-01
+tags: ["life in canada"]
+---
 
-Another thing that amazes me is the garbage collection system, lol.
+Another thing that amazes me: the garbage collection system. 😂
 
-The collector that carries off food waste is different from plastic and recyclables and ...
+There are different trucks for food waste, plastic, recyclables… and more.  
+It screams order (and *job creation*, lol).
 
-it is amazing to me. It screams order (and job employements, lol)
+What I also appreciate? The area doesn’t stink when they come by.  
+I only ever notice they’re around because the trucks are loud.
 
-I also appreciate that the area doesn't stink when they come, I only know they're here because the trucks are noisy.
-
-Point to self: Research what makes garbage collector trucks in N/A not stink.
-
+**Note to self:** Research what makes North American garbage trucks not stink. Seriously.

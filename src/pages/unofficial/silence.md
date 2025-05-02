@@ -1,18 +1,50 @@
-I think I'm broken.
+---
+title: 'Silence'
+description: 'Silence'
+pubDate: 2025-04-04
+tags: ["truly random"]
+---
+
+I think I’m broken.
 
 I can no longer code with music.
 
-I don't recall which podcast episode or blog post sent me on the challenge of working in complete silence. I thought it would be a great exercise to pracitice being with my own thoughts, so I swapped out my headphones for silence.
+I don’t remember which podcast episode or blog post inspired me to try working in complete silence.  
+Maybe it was pitched as a mindfulness challenge - a way to practice being alone with your own thoughts.
 
-Initially, it was difficult. 
+So I swapped out my headphones for… nothing.  
+Just keystrokes. Breathing. Fan noise. Silence.
 
-And to be honest, the only reason I survived it was because
-1 - As a rule, I rarely ever bring / use my phone in my workspace
-2. So I used spotify mac, but then my mac as if conspiracy started to lag with multiple tabs and operations open. In a bid to reduce to workload, I had to cut out using some tab and added spotify to list (pfft, it still lagged but at least it was a means to building an habit).
+At first, it was difficult.
 
-Now nearly 1 year later. 
+To be honest, the only reason I survived it was because:
 
-I got a new mac, and wanted to play music while I worked. We can all agree mac has the best sound system out there, anyways I decided to spin that baby around, flaunt the speakers, and enjoy my new mac (2025, M4 - no more lag!!) BUT, it felt almost painful and affected my productivity.
+1. As a rule, I rarely ever use my phone in my workspace.  
+2. I used Spotify on my Mac, but then, as if in a grand conspiracy, my Mac started lagging with too many tabs and background apps.  
 
-Of course, I can build the habit again but now I'm asking myself why?
+In a bid to reduce the load, I cut out Spotify entirely. (It still lagged - but hey, at least I was building a new habit.)
 
+Now, nearly a year later...
+
+I’ve got a new Mac.  
+M4. No lag. Gorgeous sound.  
+Naturally, I wanted to celebrate: spin that baby around, flaunt the speakers, and work to music like the good old days.
+
+But something strange happened.
+
+The music felt… disruptive.  
+Painful, even.  
+It affected my productivity.
+
+And sure, I *could* rebuild the habit of working with sound.
+
+But now I find myself asking:  
+**Why?**
+
+Maybe silence is not just empty space.  
+Maybe it became my tool.
+
+<br>
+
+_Signed,_  
+Someone who has embraced the quiet life.

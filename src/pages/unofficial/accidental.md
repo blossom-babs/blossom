@@ -1,17 +1,27 @@
-April 9 2025
+---
+title: 'Canada living 101'
+pubDate: 2025-04-09
+description: 'What exactly is accidental life insurance — and what happens if you live too long to claim it?'
+tags: ["life in canada"]
+---
 
-I got a call from my bank yesterday about getting an accidental life insurance.
+I got a call from my bank yesterday about getting accidental life insurance.
 
-yes this is diifferent from the regular life insurance.
+Yes, this is diifferent from the regular life insurance.
 
-This can only be claimed by your beneficiary in case you accidentally pass away (no, suicide, self-harm, drugs, alcohol and natural causes nullify these).
+Apparently, this can only be claimed by your beneficiary if you accidentally pass away (not including suicide, self-harm, drugs, alcohol and natural causes).
 
-In the offer my bank was offering, my chosen dependant will get up to $300,000 if I accidentally pass away.
+In the offering, if I sign up, my chosen dependant could receive up to $300,000 in the event of my accidental passing.
 
-Now all those Western mystery thrillers I enjoy makes sense, of course people are "accidentally" killing folks to get the money. Of course.
+Suddenly, all those Western mystery thrillers I love make perfect sense.  
+Of course people are “accidentally” killing folks to collect the money. Of course.
 
-I have a question though, what happens if I do not accidentally pass away (which I do not plan to as a matter of fact), when I am 80 and grey, but have spent my entire life contributing towards this bill, what then? 
+But I have a question...
 
-Oh I forgot to add that in case of critical injury (and I am quoting the salesman directly here - such as you lose your limbs, what?) Then I could get this money but of course I need to have strong proof that it is accidental.
+What happens if I do not accidentally pass away _(which I do not plan to as a matter of fact)_, When I'm 80 and grey, but have spent my entire life contributing towards this bill, what then? 
 
-Welcome to the Western civilization.
+Oh, and:  
+In the case of critical injury (I’m quoting the salesman here: *“like if you lose your limbs — what?”*), you can still claim the money.  
+You just need to provide strong proof that it was accidental.
+
+Got it.

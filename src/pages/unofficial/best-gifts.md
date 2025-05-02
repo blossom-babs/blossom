@@ -1,12 +1,29 @@
-I think one of the best gifts we can give to ourselves while we exist on this side of eternity is to learn and embrace doing difficult things.
+---
+title: 'Best Gift to Gift You'
+description: 'One of the best gifts you can give yourself is learning to embrace hard things.'
+pubDate: 2025-04-30
+tags: ["truly random", "personal"]
+---
 
-solving the hardest problems first stretches your mind
+I think one of the best gifts we can give ourselves  while we exist on this side of eternity  is learning to embrace difficult things.
 
-solving easy problems first makes us lazy (not always true), then we are faced with the hard problems, our brain rejects it and runs back to the simpler problem (we can always overcome this resistance muscle anyway)
+It is my opinion from my personal experience that -
+<br>
+Solving the hardest problems first stretches your mind.  
+Solving the easiest ones first makes us comfortable.  
+(Not always a bad thing but sometimes, it trains our brains to run from resistance.)
 
-but isn't it easier to simply do one thing at a time which is learn the skill rather than learn the skill (which no matter how easy, if new will have some level of difficulty)
+Then, when the real challenge comes, we panic. We retreat. We go back to the safe task we’ve already mastered.
 
-anwyays,
+_atleast is what I noticed with me._
 
-signed,
-someone stil learning to enjoy the difficult things.
+But what if we did the hard thing first?
+
+What if we didn’t try to learn *everything* at once, just the one difficult thing in front of us?  
+What if we stopped waiting for difficulty to feel easy, and just got used to showing up anyway?
+
+Anyways.
+
+Signed,  
+<br>
+**Someone who's taking the path of least resistance all her life and is now learning to gift herself the joy of embracing hard things.**
