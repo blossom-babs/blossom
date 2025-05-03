@@ -10,3 +10,13 @@ tags: ["grind"]
 Timestamp: 9:29AM
 
 ◻️
+
+**Built**: **An AI voice assistant to help me prepare for my mock interviews**
+
+You can try it out here: https://interview-prep-theta-gilt.vercel.app/
+
+Timestamp: 10:44PM
+
+Stack used: Next.js, Typescript, Vapi, Google Gemini, Vercel AI, shadcn
+
+🟩
