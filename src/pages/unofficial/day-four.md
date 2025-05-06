@@ -1,7 +1,7 @@
 ---
 title: 'Day 4'
 description: 'Day 4 of 31 days of Code (May)'
-pubDate: 2025-05-04,
+pubDate: 2025-05-04
 tags: ["grind"]
 ---
 
