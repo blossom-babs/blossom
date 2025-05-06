@@ -1,6 +1,6 @@
 ---
 title: 'Day 5'
-description: 'Day 45of 31 days of Code (May)'
+description: 'Day 5 of 31 days of Code (May)'
 pubDate: 2025-05-05,
 tags: ["grind"]
 ---
