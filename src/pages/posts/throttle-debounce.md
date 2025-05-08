@@ -72,7 +72,6 @@ Let’s break it down.
 * **Debounce**: “Wait until they stop talking before replying.”
 * **Throttle**: “Reply every 1 second, no matter how many times they talk.”
 
-It also helps to associate with familiar terms, Debounce -> (setTimeout), throttle -> (setInterval behaviour)
 
 
 
