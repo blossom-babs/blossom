@@ -1,6 +1,7 @@
 ---
-title: "Debounce vs Throttle: What's the Difference?"
+title: "Debounce vs Throttle: Peas in a Perfomance Pod"
 description: "Understand the core differences between debounce and throttle, with real-world examples and when to use each in your frontend applications."
+featured: true
 pubDate: 2025-05-07
 tags: ["frontend", "javascript", "performance", "debounce", "throttle"]
 ---
