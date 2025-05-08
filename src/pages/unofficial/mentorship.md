@@ -4,6 +4,7 @@ description: 'How to get the most of mentorship'
 pubDate: 2025-05-08,
 tags: ["grind"]
 ---
+__random thoughts at 8AM.__
 
 I believe the right mentorship does accelerate growth. 
 
