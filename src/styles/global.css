@@ -299,3 +299,15 @@ blockquote {
 blockquote p {
   margin: 0;
 }
+
+
+
+article table {
+  border-collapse: collapse;
+  width: 100%;
+}
+article table th,
+article table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
