@@ -1,7 +1,7 @@
 ---
 title: 'Day 11 - Side Project, sipsync'
 description: 'Day 11 of 31 days of Code (May)'
-pubDate: 2025-05-07,
+pubDate: 2025-05-11,
 tags: ["grind"]
 ---
 

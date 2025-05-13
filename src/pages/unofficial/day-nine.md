@@ -1,7 +1,7 @@
 ---
 title: 'Day 9 - A slow day'
 description: 'Day 9 of 31 days of Code (May)'
-pubDate: 2025-05-07,
+pubDate: 2025-05-09,
 tags: ["grind"]
 ---
 

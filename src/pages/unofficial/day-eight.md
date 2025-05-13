@@ -1,7 +1,7 @@
 ---
 title: 'Day 8 - Back to the basics'
 description: 'Day 8 of 31 days of Code (May)'
-pubDate: 2025-05-07,
+pubDate: 2025-05-08,
 tags: ["grind"]
 ---
 

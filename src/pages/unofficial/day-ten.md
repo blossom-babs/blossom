@@ -1,7 +1,7 @@
 ---
 title: 'Day 10 - YDKJS'
 description: 'Day 10 of 31 days of Code (May)'
-pubDate: 2025-05-07,
+pubDate: 2025-05-10,
 tags: ["grind"]
 ---
 
