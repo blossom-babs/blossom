@@ -123,7 +123,7 @@ export const books = {
         rating: 4,
 link:"",
 genre: ["self-help", "mindset"],
-note: "Started as a slow-burn for me but when I eventually got into it, I could not put it down. \n As a sidenote I figures there are 2 kinds of self-help book, 1 based off personal experience, 2 based off of research/study and of course a third that balances both. I reckon there are outliers but I would group my personal experiences into these group. \n This book largely tilted towards research which can sometimes draw out but stick with it, and you would be better off for it. I scored poorly on the gritty score but I'm giving myself a year to retake it.",        
+note: "Started as a slow-burn for me but when I eventually got into it, I could not put it down. \n\n As a sidenote I figures there are 2 kinds of self-help book, 1 based off personal experience, 2 based off of research/study and of course a third that balances both. I reckon there are outliers but I would group my personal experiences into these group. \n\n This book largely tilted towards research which can sometimes draw out but stick with it, and you would be better off for it. I scored poorly on the gritty score but I'm giving myself a year to retake it.",        
       },
       {
         img: outliers,
