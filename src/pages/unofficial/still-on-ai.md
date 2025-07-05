@@ -1,8 +1,8 @@
 ---
 title: 'Still on AI'
 description: 'In which I still talk about AI, and reveal that I got a job'
-pubDate: 2025-06-29
-tags: ["new-guy-chronicles"]
+pubDate: 2025-07-05
+tags: ["new-guy-chronicles", "ai"]
 ---
 
 __I promise I'm not obsessed with AI, okay maybe just a little__
